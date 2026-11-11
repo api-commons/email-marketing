@@ -19,7 +19,7 @@ generated. Every number below is a count of providers.
 | automation | 14 | 12 | id 83%, name 67%, created_at 58%, status 58% | workflows 4, flows 3, journeys 2, automations 2 |
 | campaign_report | 11 | 9 |  | stats 6, metrics 3, summary 3, reports 1 |
 
-Cohort: 102 providers with harvested OpenAPI, 51 crosswalks. Of the providers exposing a list: 64% create, 96% list, 61% fetch, 46% update, 46% delete. Generated 2026-11-10 by build.py.
+Cohort: 102 providers with harvested OpenAPI, 51 crosswalks. Of the providers exposing a list: 64% create, 96% list, 61% fetch, 46% update, 46% delete. Generated 2026-11-11 by build.py.
 <!-- /commons:summary -->
 
 Shares are of the providers with a readable resource schema for that concept. The

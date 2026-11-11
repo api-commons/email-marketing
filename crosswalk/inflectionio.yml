@@ -1,7 +1,7 @@
 provider: inflectionio
 apis_io: https://apis.io/providers/inflectionio/
 context: email-marketing
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   list:
     path_segment:

@@ -1,7 +1,7 @@
 openapi: 3.1.0
 info:
   title: Email Marketing (API Commons)
-  version: 0.1.0-draft.20261110
+  version: 0.1.0-draft.20261111
   description: 'The common Email Marketing interface, distilled from the harvested OpenAPI of 102 providers in the
     APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
     so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
@@ -455,7 +455,7 @@ paths:
     parameters:
     - $ref: '#/components/parameters/campaign_id'
     get:
-      operationId: listCampaignReports
+      operationId: listReports
       summary: List reports
       tags:
       - Campaign Reports

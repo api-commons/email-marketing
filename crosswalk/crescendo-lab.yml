@@ -1,7 +1,7 @@
 provider: crescendo-lab
 apis_io: https://apis.io/providers/crescendo-lab/
 context: email-marketing
-generated: '2026-11-10'
+generated: '2026-11-11'
 concepts:
   list:
     path_segment:
