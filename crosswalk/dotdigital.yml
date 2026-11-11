@@ -1,0 +1,30 @@
+provider: dotdigital
+apis_io: https://apis.io/providers/dotdigital/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - summary
+    - metrics
+    properties:
+      sent:
+      - sent
+      - delivered
+      bounces:
+      - hardBounces
+      - softBounces
+      clicks:
+      - clicks
+      - uniqueClicks
+      opens:
+      - uniqueOpens
+      - opens
+      unsubscribes: unsubscribes
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/dotdigital-email-campaigns-openapi.yml#GET /v2/campaigns/metrics
+    - openapi/_original/dotdigital-email-campaigns-openapi.yml#GET /v2/campaigns/{id}/summary
+    - openapi/_original/dotdigital-v2-api-full-openapi.yml#GET /v2/campaigns/metrics
+    - openapi/_original/dotdigital-v2-api-full-openapi.yml#GET /v2/campaigns/{campaignId}/summary
+    - openapi/_original/dotdigital-v2-api-swagger.json#GET /v2/campaigns/metrics

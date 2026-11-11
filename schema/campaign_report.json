@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/campaign_report.json",
+  "title": "Campaign Report",
+  "description": "The common campaign_report in Email Marketing, distilled from 9 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "sent": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 4,
+      "x-commons-spellings": [
+        "sent",
+        "delivered"
+      ]
+    },
+    "bounces": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "bounced",
+        "hardBounces",
+        "softBounces"
+      ]
+    },
+    "clicks": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "clicked",
+        "clicks",
+        "uniqueClicks"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "id"
+      ]
+    },
+    "opens": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "opened",
+        "uniqueOpens",
+        "opens"
+      ]
+    },
+    "unsubscribes": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 3,
+      "x-commons-spellings": [
+        "unsubscribed",
+        "unsubscribes"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "email-marketing",
+    "concept": "campaign_report",
+    "providers": 9,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

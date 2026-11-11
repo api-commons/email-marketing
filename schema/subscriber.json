@@ -1,0 +1,196 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/subscriber.json",
+  "title": "Subscriber",
+  "description": "The common subscriber in Email Marketing, distilled from 27 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "email",
+        "email_address",
+        "emailAddress",
+        "emails",
+        "Email"
+      ],
+      "format": "email"
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.778,
+      "x-commons-providers": 21,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "Id"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.704,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "customFields",
+        "custom_fields",
+        "attributes",
+        "properties",
+        "fields",
+        "merge_fields",
+        "_metadata"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.63,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "created",
+        "createdDate",
+        "subscribed_at",
+        "timestamp_opt",
+        "creation_date",
+        "CreatedDate"
+      ],
+      "format": "date-time"
+    },
+    "first_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.63,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "firstName",
+        "first_name",
+        "firstname",
+        "FirstName"
+      ]
+    },
+    "last_name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.63,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "lastName",
+        "last_name",
+        "lastname",
+        "LastName"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "subscriptionStatus"
+      ]
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.444,
+      "x-commons-providers": 12,
+      "x-commons-spellings": [
+        "updated_at",
+        "updatedAt",
+        "updatedDate",
+        "modifiedAt",
+        "last_changed",
+        "updated"
+      ],
+      "format": "date-time"
+    },
+    "name": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.37,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "Title"
+      ]
+    },
+    "phone": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.333,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "phone",
+        "phoneNumber",
+        "phone_number",
+        "Phone"
+      ]
+    },
+    "list_id": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.296,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "lists",
+        "listIds",
+        "groups",
+        "audience_id",
+        "list_id",
+        "list_ids"
+      ]
+    },
+    "tags": {
+      "type": "array",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.259,
+      "x-commons-providers": 7,
+      "x-commons-spellings": [
+        "tags",
+        "tag_ids"
+      ]
+    },
+    "contact_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "contact_id",
+        "contactId"
+      ]
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.222,
+      "x-commons-providers": 6,
+      "x-commons-spellings": [
+        "details",
+        "notes",
+        "description",
+        "Description"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "email-marketing",
+    "concept": "subscriber",
+    "providers": 27,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

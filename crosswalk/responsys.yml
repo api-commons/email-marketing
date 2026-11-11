@@ -1,0 +1,40 @@
+provider: responsys
+apis_io: https://apis.io/providers/responsys/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      description: description
+      metadata: fields
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/lists
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/programs/lists/{listName}
+    - openapi/_original/responsys-openapi.json#POST /rest/api/v1.3/lists
+    - openapi/_original/responsys-openapi.yml#GET /rest/api/v1.3/lists
+    - openapi/_original/responsys-openapi.yml#GET /rest/api/v1.3/programs/lists/{listName}
+  subscriber:
+    path_segment:
+    - members
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/responsys-openapi.json#DELETE /rest/api/v1.3/lists/{listName}/listExtensions/{petName}/members/{riid}
+    - openapi/_original/responsys-openapi.json#DELETE /rest/api/v1.3/lists/{listName}/members
+    - openapi/_original/responsys-openapi.json#DELETE /rest/api/v1.3/lists/{listName}/members/{riid}
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/lists/{listName}/listExtensions/{petName}/members
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/lists/{listName}/listExtensions/{petName}/members/{riid}
+  campaign:
+    path_segment:
+    - campaigns
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/attributes/campaigns/{campaignName}
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/campaigns
+    - openapi/_original/responsys-openapi.json#GET /rest/api/v1.3/campaigns/{campaignName}
+    - openapi/_original/responsys-openapi.json#POST /rest/api/v1.3/attributes/campaigns/{campaignName}
+    - openapi/_original/responsys-openapi.yml#GET /rest/api/v1.3/attributes/campaigns/{campaignName}

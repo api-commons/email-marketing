@@ -1,0 +1,29 @@
+provider: vbout
+apis_io: https://apis.io/providers/vbout/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      type: type
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vbout-openapi-original.json#GET Goal/Lists
+    - openapi/_original/vbout-openapi-original.json#GET User/Lists
+    - openapi/_original/vbout-openapi-original.json#GET WebHook/lists
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      created_at: creation_date
+      subject: subject
+      from_email: from_email
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/vbout-openapi-original.json#GET EmailMarketing/Campaigns
+    - openapi/_original/vbout-plugin-openapi-original.yaml#GET /EmailMarketing/Campaigns

@@ -1,0 +1,51 @@
+provider: iterable
+apis_io: https://apis.io/providers/iterable/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      description: description
+      list_id: listId
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#DELETE /api/lists/{listId}
+    - openapi/_original/iterable-api-openapi.json#GET /api/lists
+    - openapi/_original/iterable-api-openapi.json#POST /api/lists
+    - openapi/_original/iterable-rest-api-openapi.yml#GET /lists
+    - openapi/_original/iterable-rest-api-openapi.yml#POST /lists
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+      type: type
+      list_id: listIds
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#GET /api/campaigns
+    - openapi/_original/iterable-api-openapi.json#GET /api/campaigns/{id}
+    - openapi/_original/iterable-rest-api-openapi.yml#GET /campaigns
+  automation:
+    path_segment:
+    - journeys
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#GET /api/journeys
+  campaign_report:
+    path_segment:
+    - metrics
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/iterable-api-openapi.json#GET /api/campaigns/metrics
+    - openapi/_original/iterable-rest-api-openapi.yml#GET /campaigns/metrics

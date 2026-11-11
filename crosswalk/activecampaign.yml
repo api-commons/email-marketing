@@ -1,0 +1,16 @@
+provider: activecampaign
+apis_io: https://apis.io/providers/activecampaign/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - audiences
+    properties:
+      id: id
+      type: type
+      metadata: attributes
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/activecampaign-segments-api-openapi.json#GET /audiences
+    - openapi/_original/activecampaign-segments-api-openapi.json#GET /audiences/{segmentId}

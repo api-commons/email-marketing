@@ -1,0 +1,20 @@
+provider: xiaoman
+apis_io: https://apis.io/providers/xiaoman/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      name: name
+      created_at: create_time
+      updated_at: update_time
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/xiaoman-openapi.yml#GET /v1/capitalAccount/list
+    - openapi/_original/xiaoman-openapi.yml#GET /v1/company/list
+    - openapi/_original/xiaoman-openapi.yml#GET /v1/costInvoice/list
+    - openapi/_original/xiaoman-openapi.yml#GET /v1/dynamic/trail/list
+    - openapi/_original/xiaoman-openapi.yml#GET /v1/invoices/order/list

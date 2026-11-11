@@ -1,0 +1,22 @@
+provider: stannp
+apis_io: https://apis.io/providers/stannp/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      name:
+      - title
+      - name
+      id: id
+      created_at: created
+      updated_at: updated
+      type: type
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/stannp-direct-mail-api-openapi.yml#GET /campaigns/list
+    - openapi/_original/stannp-direct-mail-api-openapi.yml#GET /groups/list
+    - openapi/_original/stannp-direct-mail-api-openapi.yml#GET /recipients/list

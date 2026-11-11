@@ -1,0 +1,60 @@
+aid: common-email-marketing
+name: Email Marketing
+type: Common
+description: 'The common Email Marketing vocabulary, distilled from the harvested OpenAPI of 102 providers in APIs.io:
+  shared operations, JSON Schema per concept with measured adoption, and a crosswalk from the common names to each
+  provider''s own.'
+image: https://kinlane-productions.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+tags:
+- Application Programming Interface
+- API
+- Email Marketing
+- Marketing Automation
+- Newsletter
+- Newsletters
+- Common Schema
+created: '2026-11-10'
+modified: '2026-11-10'
+url: https://raw.githubusercontent.com/api-commons/email-marketing/main/apis.yml
+specificationVersion: '0.20'
+apis:
+- aid: common-email-marketing:email-marketing
+  name: Common Email Marketing Interface
+  description: The Email Marketing interface the market already shares, measured.
+  humanURL: https://github.com/api-commons/email-marketing
+  tags:
+  - Email Marketing
+  - Marketing Automation
+  properties:
+  - type: OpenAPI
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/openapi.yml
+  - type: Profile
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/profile.yml
+  - type: Adopters
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/adopters.yml
+  - type: Rules
+    url: https://raw.githubusercontent.com/api-commons/schema-commons/main/ruleset/schema-commons-naming.yaml
+  - type: JSONSchema
+    name: list
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/list.json
+  - type: JSONSchema
+    name: subscriber
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/subscriber.json
+  - type: JSONSchema
+    name: segment
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/segment.json
+  - type: JSONSchema
+    name: campaign
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/campaign.json
+  - type: JSONSchema
+    name: automation
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/automation.json
+  - type: JSONSchema
+    name: campaign_report
+    url: https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/campaign_report.json
+common:
+- type: License
+  url: https://raw.githubusercontent.com/api-commons/email-marketing/main/LICENSE
+maintainers:
+- FN: Kin Lane
+  email: kin@apievangelist.com

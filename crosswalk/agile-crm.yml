@@ -1,0 +1,29 @@
+provider: agile-crm
+apis_io: https://apis.io/providers/agile-crm/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#POST /api/contacts/companies/list
+  subscriber:
+    path_segment:
+    - contacts
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#DELETE /api/contacts/{id}
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts
+    - openapi/_original/agile-crm-openapi.yml#GET /api/contacts/{id}
+    - openapi/_original/agile-crm-openapi.yml#POST /api/contacts
+  automation:
+    path_segment:
+    - workflows
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/agile-crm-openapi.yml#GET /api/workflows

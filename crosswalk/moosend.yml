@@ -1,0 +1,12 @@
+provider: moosend
+apis_io: https://apis.io/providers/moosend/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - stats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/moosend-openapi.yml#GET /campaigns/{CampaignID}/stats/{Type}.{Format}

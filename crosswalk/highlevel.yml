@@ -1,0 +1,86 @@
+provider: highlevel
+apis_io: https://apis.io/providers/highlevel/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    - audiences
+    properties:
+      name: name
+      id:
+      - id
+      - _id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: details
+      type: type
+      status: status
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/facebook/reporting/list
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/audiences
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/audiences/{audienceId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/reporting/list
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/linkedin/reporting/list
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      id: id
+      metadata: customFields
+      first_name: firstName
+      last_name: lastName
+      status: state
+      name: name
+      phone: phone
+      tags: tags
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/highlevel-contacts-openapi.json#DELETE /contacts/{contactId}
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/
+    - openapi/_original/highlevel-contacts-openapi.json#GET /contacts/{contactId}
+    - openapi/_original/highlevel-contacts-openapi.json#POST /contacts/
+    - openapi/_original/highlevel-contacts-openapi.json#PUT /contacts/{contactId}
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      name: name
+      type: type
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/highlevel-ad-manager-openapi.json#DELETE /ad-publishing/google/segments/{segmentId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/segments
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/segments/{segmentId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#PUT /ad-publishing/google/segments
+  campaign:
+    path_segment:
+    - campaigns
+    - campaign
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/highlevel-ad-manager-openapi.json#DELETE /ad-publishing/facebook/campaigns/{campaignId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/facebook/campaign/{campaignId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/facebook/reporting/campaign/{campaignId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#GET /ad-publishing/google/reporting/campaign/{campaignId}
+    - openapi/_original/highlevel-ad-manager-openapi.json#PUT /ad-publishing/facebook/campaigns
+  automation:
+    path_segment:
+    - workflows
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/highlevel-workflows-openapi.json#GET /workflows/

@@ -1,0 +1,45 @@
+provider: brevo
+apis_io: https://apis.io/providers/brevo/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      subscriber_count: totalSubscribers
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/brevo-contact-management-openapi.yml#DELETE /contacts/lists/{listId}
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/folders/{folderId}/lists
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/lists
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/lists/{listId}
+    - openapi/_original/brevo-contact-management-openapi.yml#POST /contacts/lists
+  subscriber:
+    path_segment:
+    - contacts
+    - contact
+    properties:
+      email: email
+      id: id
+      metadata: attributes
+      created_at: createdAt
+      updated_at: modifiedAt
+      list_id: listIds
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/brevo-contact-management-openapi.yml#DELETE /contacts/{identifier}
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/{identifier}
+    - openapi/_original/brevo-contact-management-openapi.yml#POST /contacts
+    - openapi/_original/brevo-contact-management-openapi.yml#PUT /contacts/{identifier}
+  segment:
+    path_segment:
+    - segments
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/segments

@@ -1,0 +1,79 @@
+provider: aweber
+apis_io: https://apis.io/providers/aweber/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id:
+      - id
+      - uuid
+      subscriber_count: total_subscribers
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}
+  subscriber:
+    path_segment:
+    - subscribers
+    properties:
+      email: email
+      id:
+      - id
+      - uuid
+      metadata: custom_fields
+      created_at: subscribed_at
+      status: status
+      name: name
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/aweber-api-openapi.yml#DELETE /accounts/{accountId}/lists/{listId}/subscribers
+    - openapi/_original/aweber-api-openapi.yml#DELETE /accounts/{accountId}/lists/{listId}/subscribers/{subscriberId}
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/subscribers
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/subscribers/{subscriberId}
+    - openapi/_original/aweber-api-openapi.yml#PATCH /accounts/{accountId}/lists/{listId}/subscribers
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      name: name
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/segments
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/segments/{segmentId}
+  campaign:
+    path_segment:
+    - broadcasts
+    - campaigns
+    properties:
+      id:
+      - id
+      - uuid
+      status: status
+      created_at: created_at
+      type: campaign_type
+      sent_at:
+      - scheduled_at
+      - sent_at
+      subject: subject
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/aweber-api-openapi.yml#DELETE /accounts/{accountId}/lists/{listId}/broadcasts/{broadcastId}
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/broadcasts
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/broadcasts/{broadcastId}
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/campaigns
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/campaigns/{campaignType}{campaignId}
+  campaign_report:
+    path_segment:
+    - stats
+    properties:
+      id: id
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/campaigns/b{campaignId}/stats
+    - openapi/_original/aweber-api-openapi.yml#GET /accounts/{accountId}/lists/{listId}/campaigns/b{campaignId}/stats/{statsId}

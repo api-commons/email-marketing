@@ -1,0 +1,47 @@
+provider: listrak
+apis_io: https://apis.io/providers/listrak/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      status: status
+      list_id: listId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/listrak-email-openapi.json#DELETE /v1/List/{listId}
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}
+    - openapi/_original/listrak-email-openapi.json#POST /v1/List
+    - openapi/_original/listrak-email-openapi.json#PUT /v1/List/{listId}
+  subscriber:
+    path_segment:
+    - contact
+    properties:
+      email: emailAddress
+      first_name: firstName
+      last_name: lastName
+      status: status
+      phone: phoneNumber
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Contact
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Contact/{contactIdentifier}
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/ListImport/{importFileId}/Contact
+    - openapi/_original/listrak-email-openapi.json#POST /v1/List/{listId}/Contact
+    - openapi/_original/listrak-email-openapi.yml#GET /v1/List/{listId}/Contact
+  campaign:
+    path_segment:
+    - campaign
+    properties:
+      id: campaignId
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/listrak-email-openapi.json#DELETE /v1/List/{listId}/Campaign/{campaignId}
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Campaign
+    - openapi/_original/listrak-email-openapi.json#GET /v1/List/{listId}/Campaign/{campaignId}
+    - openapi/_original/listrak-email-openapi.json#POST /v1/List/{listId}/Campaign
+    - openapi/_original/listrak-email-openapi.json#PUT /v1/List/{listId}/Campaign/{campaignId}

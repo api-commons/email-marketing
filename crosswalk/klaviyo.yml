@@ -1,0 +1,72 @@
+provider: klaviyo
+apis_io: https://apis.io/providers/klaviyo/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      id: id
+      type: type
+      metadata: attributes
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/lists/{id}
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/tags/{id}/relationships/lists
+    - openapi/_original/klaviyo-openapi.json#GET /api/lists
+    - openapi/_original/klaviyo-openapi.json#GET /api/lists/{id}
+    - openapi/_original/klaviyo-openapi.json#GET /api/profile-bulk-import-jobs/{id}/lists
+  subscriber:
+    path_segment:
+    - profiles
+    properties:
+      id: id
+      metadata: attributes
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/lists/{id}/relationships/profiles
+    - openapi/_original/klaviyo-openapi.json#GET /api/lists/{id}/profiles
+    - openapi/_original/klaviyo-openapi.json#GET /api/lists/{id}/relationships/profiles
+    - openapi/_original/klaviyo-openapi.json#GET /api/profile-bulk-import-jobs/{id}/profiles
+    - openapi/_original/klaviyo-openapi.json#GET /api/profile-bulk-import-jobs/{id}/relationships/profiles
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/segments/{id}
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/tags/{id}/relationships/segments
+    - openapi/_original/klaviyo-openapi.json#GET /api/profiles/{id}/relationships/segments
+    - openapi/_original/klaviyo-openapi.json#GET /api/profiles/{id}/segments
+    - openapi/_original/klaviyo-openapi.json#GET /api/segments
+  campaign:
+    path_segment:
+    - campaigns
+    - campaign
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/campaigns/{id}
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/tags/{id}/relationships/campaigns
+    - openapi/_original/klaviyo-openapi.json#GET /api/campaign-messages/{id}/campaign
+    - openapi/_original/klaviyo-openapi.json#GET /api/campaign-messages/{id}/relationships/campaign
+    - openapi/_original/klaviyo-openapi.json#GET /api/campaigns
+  automation:
+    path_segment:
+    - flows
+    properties:
+      id: id
+      type: type
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/flows/{id}
+    - openapi/_original/klaviyo-openapi.json#DELETE /api/tags/{id}/relationships/flows
+    - openapi/_original/klaviyo-openapi.json#GET /api/flows
+    - openapi/_original/klaviyo-openapi.json#GET /api/flows/{id}
+    - openapi/_original/klaviyo-openapi.json#GET /api/tags/{id}/relationships/flows

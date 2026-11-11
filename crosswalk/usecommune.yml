@@ -1,0 +1,13 @@
+provider: usecommune
+apis_io: https://apis.io/providers/usecommune/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - stats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/usecommune-openapi.json#GET /newsletters/{newsletter}/stats
+    - openapi/_original/usecommune-openapi.yml#GET /newsletters/{newsletter}/stats

@@ -1,0 +1,24 @@
+provider: braze
+apis_io: https://apis.io/providers/braze/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/braze-openapi.yml#GET /campaigns/list
+    - openapi/_original/braze-openapi.yml#GET /canvas/list
+    - openapi/_original/braze-openapi.yml#GET /content_blocks/list
+    - openapi/_original/braze-openapi.yml#GET /events/list
+    - openapi/_original/braze-openapi.yml#GET /feed/list
+  segment:
+    path_segment:
+    - segment
+    properties:
+      id: segment_id
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/braze-openapi.yml#POST /users/export/segment

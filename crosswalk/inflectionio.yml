@@ -1,0 +1,52 @@
+provider: inflectionio
+apis_io: https://apis.io/providers/inflectionio/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/inflectionio-openapi.yml#DELETE /v2/lists/{id}
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/lists
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/lists/{id}
+    - openapi/_original/inflectionio-openapi.yml#PATCH /v2/lists/{id}
+    - openapi/_original/inflectionio-openapi.yml#POST /v2/lists
+  subscriber:
+    path_segment:
+    - contacts
+    - members
+    properties:
+      email: email
+      id: id
+      metadata: properties
+      first_name: firstName
+      last_name: lastName
+      status: status
+      name: title
+      phone: phoneNumber
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/inflectionio-openapi.yml#DELETE /v2/lists/{id}/members/{contactId}
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/contacts/{id}
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/lists/{id}/members
+    - openapi/_original/inflectionio-openapi.yml#PATCH /v2/contacts/{id}
+    - openapi/_original/inflectionio-openapi.yml#POST /v2/contacts
+  automation:
+    path_segment:
+    - journeys
+    properties:
+      status: status
+      created_at: createdAt
+      name: name
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/journeys
+    - openapi/_original/inflectionio-openapi.yml#GET /v2/journeys/{id}

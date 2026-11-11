@@ -1,0 +1,46 @@
+provider: marketo
+apis_io: https://apis.io/providers/marketo/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+      list_id: listId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/marketo-data-ingestion-openapi-original.json#POST /subscriptions/{munchkinId}/lists
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lists.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/lists/{listId}.json
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      name: name
+      created_at: createdAt
+      description: description
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/marketo-asset-openapi-original.json#GET /rest/asset/v1/segmentation/{id}/segments.json
+    - openapi/_original/marketo-engage-rest-api-openapi.yml#GET /rest/asset/v1/segmentation/{id}/segments.json
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+      type: type
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/campaigns.json
+    - openapi/_original/marketo-lead-database-openapi-original.json#GET /rest/v1/campaigns/{campaignId}.json

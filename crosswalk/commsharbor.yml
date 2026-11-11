@@ -1,0 +1,55 @@
+provider: commsharbor
+apis_io: https://apis.io/providers/commsharbor/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - audiences
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      subscriber_count: member_count
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/audiences/{audience_id}
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/audiences
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/audiences/{audience_id}
+    - openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}/audiences/{audience_id}
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/audiences
+  subscriber:
+    path_segment:
+    - contacts
+    - members
+    properties:
+      email: email
+      id: id
+      created_at: created_at
+      first_name: first_name
+      last_name: last_name
+      updated_at: updated_at
+      contact_id: contact_id
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/audiences/{audience_id}/members/{contact_id}
+    - openapi/_original/commsharbor-openapi.json#DELETE /api/organizations/{organization_id}/crm/contacts/{contact_id}
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/audiences/{audience_id}/members
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/contacts
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/crm/contacts/{contact_id}
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      name: name
+      list_id: audience_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/campaigns
+    - openapi/_original/commsharbor-openapi.json#GET /api/organizations/{organization_id}/campaigns/{campaign_id}
+    - openapi/_original/commsharbor-openapi.json#PATCH /api/organizations/{organization_id}/campaigns/{campaign_id}
+    - openapi/_original/commsharbor-openapi.json#POST /api/organizations/{organization_id}/campaigns
+    - openapi/_original/commsharbor-openapi_2.json#GET /api/organizations/{organization_id}/campaigns

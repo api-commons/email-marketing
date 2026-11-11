@@ -1,0 +1,38 @@
+provider: hubspot
+apis_io: https://apis.io/providers/hubspot/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    - list
+    properties:
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+      list_id: listId
+      subscriber_count: size
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/hubspot-marketing-marketing-emails-openapi.json#GET /marketing/emails/2026-09/statistics/list
+    - openapi/_original/hubspot-marketing-marketing-events-openapi.json#DELETE /marketing/marketing-events/2026-09/associations/{externalAccountId}/{externalEventId}/lists/{listId}
+    - openapi/_original/hubspot-marketing-marketing-events-openapi.json#DELETE /marketing/marketing-events/2026-09/associations/{marketingEventId}/lists/{listId}
+    - openapi/_original/hubspot-marketing-marketing-events-openapi.json#GET /marketing/marketing-events/2026-09/associations/{externalAccountId}/{externalEventId}/lists
+    - openapi/_original/hubspot-marketing-marketing-events-openapi.json#GET /marketing/marketing-events/2026-09/associations/{marketingEventId}/lists
+  subscriber:
+    path_segment:
+    - contacts
+    - contact
+    properties:
+      id: id
+      metadata: properties
+      created_at: createdAt
+      updated_at: updatedAt
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/hubspot-automation-sequences-openapi.json#GET /automation/sequences/2026-03/enrollments/contact/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#DELETE /crm/objects/2026-03/contacts/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#GET /crm/objects/2026-03/contacts
+    - openapi/_original/hubspot-crm-contacts-openapi.json#GET /crm/objects/2026-03/contacts/{contactId}
+    - openapi/_original/hubspot-crm-contacts-openapi.json#PATCH /crm/objects/2026-03/contacts/{contactId}

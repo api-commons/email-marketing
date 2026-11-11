@@ -1,0 +1,22 @@
+provider: customer-io
+apis_io: https://apis.io/providers/customer-io/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - metrics
+    properties:
+      sent:
+      - delivered
+      - sent
+      bounces: bounced
+      clicks: clicked
+      opens: opened
+      unsubscribes: unsubscribed
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/campaigns/{campaign_id}/actions/{action_id}/metrics
+    - openapi/_original/customer-io-app-api-openapi.json#GET /v1/campaigns/{campaign_id}/metrics
+    - openapi/_original/customer-io-journeys-api-openapi.json#GET /v1/campaigns/{campaign_id}/actions/{action_id}/metrics
+    - openapi/_original/customer-io-journeys-api-openapi.json#GET /v1/campaigns/{campaign_id}/metrics

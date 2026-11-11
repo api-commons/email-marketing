@@ -1,0 +1,90 @@
+provider: eloqua
+apis_io: https://apis.io/providers/eloqua/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    - lists
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/1.0/assets/contact/list/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /api/bulk/2.0/accounts/lists
+    - openapi/_original/eloqua-published-swagger.json#GET /api/bulk/2.0/accounts/lists/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /api/bulk/2.0/contacts/lists
+    - openapi/_original/eloqua-published-swagger.json#GET /api/bulk/2.0/contacts/lists/{id}
+  subscriber:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email: emailAddress
+      id: id
+      created_at:
+      - createdAt
+      - createdDate
+      first_name: firstName
+      last_name: lastName
+      updated_at: updatedAt
+      name:
+      - name
+      - title
+      contact_id: contactId
+      description:
+      - description
+      - details
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/1.0/data/contact/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Contact
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Contact/{key}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Contact
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/OpportunityAnalysis/1/Contact/{key}
+  segment:
+    path_segment:
+    - segment
+    - segments
+    properties:
+      id:
+      - id
+      - segmentId
+      name: name
+      created_at: createdAt
+      type: type
+      description: description
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/1.0/assets/contact/segment/{id}
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/2.0/assets/contact/segment/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Segment
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Segment/{key}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/CampaignAnalysis/1/Segment
+  campaign:
+    path_segment:
+    - campaign
+    - campaigns
+    properties:
+      id: id
+      status: campaignStatus
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+      type:
+      - campaignType
+      - type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/eloqua-published-swagger.json#DELETE /api/rest/2.0/assets/campaign/{id}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Campaign
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/ActivityDetails/1/Campaign/{key}
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/CampaignAnalysis/1/Campaign
+    - openapi/_original/eloqua-published-swagger.json#GET /API/OData/CampaignAnalysis/1/Campaign/{key}

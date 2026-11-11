@@ -1,0 +1,532 @@
+openapi: 3.1.0
+info:
+  title: Email Marketing (API Commons)
+  version: 0.1.0-draft.20261110
+  description: 'The common Email Marketing interface, distilled from the harvested OpenAPI of 102 providers in the
+    APIs.io catalog. Not a product: no one serves this API. It is the shape the market already shares, measured,
+    so that providers, agents and integrators can map to one vocabulary. See profile.yml.'
+  license:
+    name: CC BY-NC-SA 4.0
+    url: https://creativecommons.org/licenses/by-nc-sa/4.0/
+paths:
+  /lists:
+    get:
+      operationId: listLists
+      summary: List lists
+      tags:
+      - Lists
+      x-commons-tier: core
+      x-commons-share: 0.955
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id001
+                  $ref: '#/components/schemas/List'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createList
+      summary: Create a list
+      tags:
+      - Lists
+      x-commons-tier: core
+      x-commons-share: 0.636
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /lists/{list_id}:
+    parameters:
+    - $ref: '#/components/parameters/list_id'
+    get:
+      operationId: getList
+      summary: Get a list
+      tags:
+      - Lists
+      x-commons-tier: core
+      x-commons-share: 0.614
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    delete:
+      operationId: deleteList
+      summary: Delete a list
+      tags:
+      - Lists
+      x-commons-tier: extended
+      x-commons-share: 0.455
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+    patch:
+      operationId: updateList
+      summary: Update a list
+      tags:
+      - Lists
+      x-commons-tier: extended
+      x-commons-share: 0.455
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id001
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id001
+  /subscribers:
+    post:
+      operationId: createSubscriber
+      summary: Create a subscriber
+      tags:
+      - Subscribers
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: &id002
+                $ref: '#/components/schemas/Subscriber'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+    get:
+      operationId: listSubscribers
+      summary: List subscribers
+      tags:
+      - Subscribers
+      x-commons-tier: core
+      x-commons-share: 0.966
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: *id002
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+  /subscribers/{subscriber_id}:
+    parameters:
+    - $ref: '#/components/parameters/subscriber_id'
+    get:
+      operationId: getSubscriber
+      summary: Get a subscriber
+      tags:
+      - Subscribers
+      x-commons-tier: core
+      x-commons-share: 0.862
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    delete:
+      operationId: deleteSubscriber
+      summary: Delete a subscriber
+      tags:
+      - Subscribers
+      x-commons-tier: core
+      x-commons-share: 0.759
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+    patch:
+      operationId: updateSubscriber
+      summary: Update a subscriber
+      tags:
+      - Subscribers
+      x-commons-tier: core
+      x-commons-share: 0.69
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id002
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id002
+  /segments:
+    get:
+      operationId: listSegments
+      summary: List segments
+      tags:
+      - Segments
+      x-commons-tier: core
+      x-commons-share: 0.933
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id003
+                  $ref: '#/components/schemas/Segment'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createSegment
+      summary: Create a segment
+      tags:
+      - Segments
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /segments/{segment_id}:
+    parameters:
+    - $ref: '#/components/parameters/segment_id'
+    get:
+      operationId: getSegment
+      summary: Get a segment
+      tags:
+      - Segments
+      x-commons-tier: core
+      x-commons-share: 0.733
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    delete:
+      operationId: deleteSegment
+      summary: Delete a segment
+      tags:
+      - Segments
+      x-commons-tier: core
+      x-commons-share: 0.6
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+    patch:
+      operationId: updateSegment
+      summary: Update a segment
+      tags:
+      - Segments
+      x-commons-tier: core
+      x-commons-share: 0.533
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id003
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id003
+  /campaigns:
+    get:
+      operationId: listCampaigns
+      summary: List campaigns
+      tags:
+      - Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.963
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id004
+                  $ref: '#/components/schemas/Campaign'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createCampaign
+      summary: Create a campaign
+      tags:
+      - Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.593
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+  /campaigns/{campaign_id}:
+    parameters:
+    - $ref: '#/components/parameters/campaign_id'
+    get:
+      operationId: getCampaign
+      summary: Get a campaign
+      tags:
+      - Campaigns
+      x-commons-tier: core
+      x-commons-share: 0.852
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+    patch:
+      operationId: updateCampaign
+      summary: Update a campaign
+      tags:
+      - Campaigns
+      x-commons-tier: extended
+      x-commons-share: 0.481
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id004
+    delete:
+      operationId: deleteCampaign
+      summary: Delete a campaign
+      tags:
+      - Campaigns
+      x-commons-tier: extended
+      x-commons-share: 0.444
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id004
+  /automations:
+    get:
+      operationId: listAutomations
+      summary: List automations
+      tags:
+      - Automations
+      x-commons-tier: core
+      x-commons-share: 1.0
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items: &id005
+                  $ref: '#/components/schemas/Automation'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+    post:
+      operationId: createAutomation
+      summary: Create an automation
+      tags:
+      - Automations
+      x-commons-tier: extended
+      x-commons-share: 0.429
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /automations/{automation_id}:
+    parameters:
+    - $ref: '#/components/parameters/automation_id'
+    get:
+      operationId: getAutomation
+      summary: Get an automation
+      tags:
+      - Automations
+      x-commons-tier: core
+      x-commons-share: 0.643
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+    patch:
+      operationId: updateAutomation
+      summary: Update an automation
+      tags:
+      - Automations
+      x-commons-tier: extended
+      x-commons-share: 0.214
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema: *id005
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: *id005
+  /campaigns/{campaign_id}/reports:
+    parameters:
+    - $ref: '#/components/parameters/campaign_id'
+    get:
+      operationId: listCampaignReports
+      summary: List reports
+      tags:
+      - Campaign Reports
+      x-commons-tier: core
+      x-commons-share: 0.909
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/CampaignReport'
+      parameters:
+      - name: limit
+        in: query
+        schema:
+          type: integer
+      - name: cursor
+        in: query
+        schema:
+          type: string
+components:
+  schemas:
+    List:
+      $ref: ./schema/list.json
+    Subscriber:
+      $ref: ./schema/subscriber.json
+    Segment:
+      $ref: ./schema/segment.json
+    Campaign:
+      $ref: ./schema/campaign.json
+    Automation:
+      $ref: ./schema/automation.json
+    CampaignReport:
+      $ref: ./schema/campaign_report.json
+  parameters:
+    list_id:
+      name: list_id
+      in: path
+      required: true
+      schema:
+        type: string
+    subscriber_id:
+      name: subscriber_id
+      in: path
+      required: true
+      schema:
+        type: string
+    segment_id:
+      name: segment_id
+      in: path
+      required: true
+      schema:
+        type: string
+    campaign_id:
+      name: campaign_id
+      in: path
+      required: true
+      schema:
+        type: string
+    automation_id:
+      name: automation_id
+      in: path
+      required: true
+      schema:
+        type: string
+    campaign_report_id:
+      name: campaign_report_id
+      in: path
+      required: true
+      schema:
+        type: string

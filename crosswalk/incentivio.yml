@@ -1,0 +1,39 @@
+provider: incentivio
+apis_io: https://apis.io/providers/incentivio/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      name: title
+      type: type
+      status: status
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/incentivio-admin-api-openapi.json#POST /incentivio-ordering-service/catalogs/list
+    - openapi/_original/incentivio-admin-api-openapi.json#POST /incentivio-ordering-service/groups/list
+    - openapi/_original/incentivio-admin-api-openapi.json#POST /incentivio-ordering-service/items/list
+    - openapi/_original/incentivio-admin-api-openapi.yml#POST /incentivio-ordering-service/catalogs/list
+    - openapi/_original/incentivio-admin-api-openapi.yml#POST /incentivio-ordering-service/groups/list
+  segment:
+    path_segment:
+    - segments
+    properties:
+      created_at: createdDate
+    core_coverage: 0.333
+    evidence:
+    - openapi/_original/incentivio-admin-api-openapi.json#DELETE /incentivio-auto-tagger-service/segments/{segmentId}
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-auto-tagger-service/segments
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-auto-tagger-service/segments/{segmentId}
+    - openapi/_original/incentivio-admin-api-openapi.json#POST /incentivio-auto-tagger-service/segments
+    - openapi/_original/incentivio-admin-api-openapi.json#PUT /incentivio-auto-tagger-service/segments/{segmentId}
+  campaign:
+    path_segment:
+    - campaigns
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/incentivio-admin-api-openapi.json#GET /incentivio-offers-domain/clients/merchants/campaigns
+    - openapi/_original/incentivio-admin-api-openapi.yml#GET /incentivio-offers-domain/clients/merchants/campaigns

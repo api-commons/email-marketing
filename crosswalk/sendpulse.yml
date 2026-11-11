@@ -1,0 +1,90 @@
+provider: sendpulse
+apis_io: https://apis.io/providers/sendpulse/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      name: name
+      id: id
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+      type: type
+      status: status
+      metadata: attributes
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-a360-openapi.yml#GET /a360/autoresponders/list
+    - openapi/_original/sendpulse-crm-openapi.yml#POST /companies/list
+    - openapi/_original/sendpulse-crm-openapi.yml#POST /tasks/list
+    - openapi/_original/sendpulse-popups-openapi.yml#GET /public/api/popups/list/{projectId}
+    - openapi/_original/sendpulse-popups-openapi.yml#GET /public/api/widgets/list
+  subscriber:
+    path_segment:
+    - contacts
+    - contact
+    properties:
+      email: emails
+      id: id
+      metadata: attributes
+      created_at:
+      - createdAt
+      - created_at
+      first_name: firstName
+      last_name: lastName
+      status: status
+      updated_at: updatedAt
+      name: name
+      phone: phone
+      tags: tags
+      contact_id: contact_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-crm-openapi.yml#DELETE /contact-tags/{tagId}/contact/{contactId}
+    - openapi/_original/sendpulse-crm-openapi.yml#DELETE /contacts/{contactId}
+    - openapi/_original/sendpulse-crm-openapi.yml#DELETE /deals/{dealId}/contacts/{contactId}
+    - openapi/_original/sendpulse-crm-openapi.yml#DELETE /task-contacts/{taskId}/contact/{contactId}
+    - openapi/_original/sendpulse-crm-openapi.yml#GET /contacts/{contactId}
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id:
+      - id
+      - campaign_id
+      status: status
+      created_at: created_at
+      name: name
+      type: type
+      sent_at: send_at
+      subject:
+      - subject
+      - title
+      from_email: sender_email
+      list_id: list_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#DELETE /campaigns/{id}
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /addressbooks/{id}/campaigns
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /campaigns
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#GET /campaigns/{id}
+    - openapi/_original/sendpulse-bulk-email-openapi.yml#PATCH /campaigns/{id}
+  automation:
+    path_segment:
+    - flows
+    - autoresponders
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      name: name
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/sendpulse-a360-openapi.yml#GET /a360/autoresponders/{ID}
+    - openapi/_original/sendpulse-facebook-openapi.yml#GET /flows
+    - openapi/_original/sendpulse-instagram-openapi.yml#GET /flows
+    - openapi/_original/sendpulse-live-chat-openapi.yml#GET /flows
+    - openapi/_original/sendpulse-telegram-openapi.yml#GET /flows

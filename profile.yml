@@ -1,0 +1,1017 @@
+context: email-marketing
+name: Email Marketing
+generated: '2026-11-10'
+version: 0.1.0-draft.20261110
+status: draft
+cohort:
+  tags:
+  - Email Marketing
+  - Marketing Automation
+  - Newsletter
+  - Newsletters
+  - SMS Marketing
+  providers_with_harvested_openapi: 102
+thresholds:
+  core: 0.5
+  extended: 0.2
+  min_providers: 3
+excluded:
+  campaign:
+    ghost-org: /newsletters are publications, not sends
+    buttondown: /newsletters are publications, not sends
+  subscriber:
+    activecampaign: /ai-customizations/v1/profiles are AI profile settings
+  automation:
+    emotive: /ticket_systems/{id}/flows are support-ticket flows
+duplicates:
+  keap:
+  - infusionsoft
+shared_specs: {}
+concepts:
+  list:
+    segments_seen:
+      lists: 22
+      list: 22
+      audiences: 9
+      contact_lists: 1
+      contact-lists: 1
+    providers_exposing: 44
+    providers_with_readable_schema: 39
+    operations:
+    - operation: GET collection
+      providers: 42
+      share: 0.955
+      tier: core
+    - operation: POST collection
+      providers: 28
+      share: 0.636
+      tier: core
+    - operation: GET item
+      providers: 27
+      share: 0.614
+      tier: core
+    - operation: DELETE item
+      providers: 20
+      share: 0.455
+      tier: extended
+    - operation: UPDATE item
+      providers: 20
+      share: 0.455
+      tier: extended
+    - operation: DELETE collection
+      providers: 4
+      share: 0.091
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 2
+      share: 0.045
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.023
+      tier: long-tail
+    properties:
+    - name: name
+      tier: core
+      providers: 33
+      share: 0.846
+      type: string
+      spellings:
+      - name
+      - title
+      - label
+      - displayName
+    - name: id
+      tier: core
+      providers: 30
+      share: 0.769
+      type: string
+      spellings:
+      - id
+      - uuid
+      - _id
+      - guid
+    - name: created_at
+      tier: core
+      providers: 26
+      share: 0.667
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - created
+      - date_created
+      - creation_date
+      - dateCreated
+      - createdDate
+      - create_time
+    - name: updated_at
+      tier: core
+      providers: 20
+      share: 0.513
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - updated
+      - update_time
+    - name: description
+      tier: extended
+      providers: 17
+      share: 0.436
+      type: string
+      spellings:
+      - description
+      - notes
+      - details
+    - name: type
+      tier: extended
+      providers: 16
+      share: 0.41
+      type: string
+      spellings:
+      - type
+    - name: status
+      tier: extended
+      providers: 14
+      share: 0.359
+      type: string
+      spellings:
+      - status
+      - state
+      - subscription_status
+    - name: metadata
+      tier: extended
+      providers: 10
+      share: 0.256
+      type: object
+      spellings:
+      - attributes
+      - fields
+      - metadata
+      - _metadata
+      - customFields
+    - name: list_id
+      tier: extended
+      providers: 9
+      share: 0.231
+      type: string
+      spellings:
+      - listId
+      - list_id
+      - list_ids
+      - groupId
+      - groups
+    - name: subscriber_count
+      tier: extended
+      providers: 8
+      share: 0.205
+      type: integer
+      spellings:
+      - member_count
+      - total_subscribers
+      - totalSubscribers
+      - size
+      - subscriber_count
+      - stats
+      - contact_count
+    long_tail_count: 658
+    long_tail_sample:
+    - account_id
+    - email
+    - tags
+    - user_id
+    - action
+    - code
+    - company
+    - deleted_at
+    - folder_id
+    - is_deleted
+    - limit
+    - list_name
+    - offset
+    - updated_by
+    - accounts
+    - address
+    - categories
+    - city
+    - color
+    - company_id
+    - company_name
+    - contact
+    - contacts
+    - country
+    - counts
+    - created_by
+    - created_by_id
+    - currency
+    - deals
+    - domain
+    - double_opt_in
+    - emails
+    - end_date
+    - entries
+    - events
+    - first_name
+    - from_email
+    - from_name
+    - job_id
+    - job_title
+  subscriber:
+    segments_seen:
+      contacts: 23
+      contact: 8
+      members: 5
+      profiles: 3
+      subscribers: 2
+      recipients: 1
+    providers_exposing: 29
+    providers_with_readable_schema: 27
+    operations:
+    - operation: POST collection
+      providers: 29
+      share: 1.0
+      tier: core
+    - operation: GET collection
+      providers: 28
+      share: 0.966
+      tier: core
+    - operation: GET item
+      providers: 25
+      share: 0.862
+      tier: core
+    - operation: DELETE item
+      providers: 22
+      share: 0.759
+      tier: core
+    - operation: UPDATE item
+      providers: 20
+      share: 0.69
+      tier: core
+    - operation: UPDATE collection
+      providers: 8
+      share: 0.276
+      tier: extended
+    - operation: DELETE collection
+      providers: 7
+      share: 0.241
+      tier: extended
+    - operation: POST item
+      providers: 5
+      share: 0.172
+      tier: long-tail
+    properties:
+    - name: email
+      tier: core
+      providers: 21
+      share: 0.778
+      type: string
+      spellings:
+      - email
+      - email_address
+      - emailAddress
+      - emails
+      - Email
+    - name: id
+      tier: core
+      providers: 21
+      share: 0.778
+      type: string
+      spellings:
+      - id
+      - uuid
+      - Id
+    - name: metadata
+      tier: core
+      providers: 19
+      share: 0.704
+      type: object
+      spellings:
+      - customFields
+      - custom_fields
+      - attributes
+      - properties
+      - fields
+      - merge_fields
+      - _metadata
+    - name: created_at
+      tier: core
+      providers: 17
+      share: 0.63
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - created
+      - createdDate
+      - subscribed_at
+      - timestamp_opt
+      - creation_date
+      - CreatedDate
+    - name: first_name
+      tier: core
+      providers: 17
+      share: 0.63
+      type: string
+      spellings:
+      - firstName
+      - first_name
+      - firstname
+      - FirstName
+    - name: last_name
+      tier: core
+      providers: 17
+      share: 0.63
+      type: string
+      spellings:
+      - lastName
+      - last_name
+      - lastname
+      - LastName
+    - name: status
+      tier: extended
+      providers: 12
+      share: 0.444
+      type: string
+      spellings:
+      - status
+      - state
+      - subscriptionStatus
+    - name: updated_at
+      tier: extended
+      providers: 12
+      share: 0.444
+      type: string
+      spellings:
+      - updated_at
+      - updatedAt
+      - updatedDate
+      - modifiedAt
+      - last_changed
+      - updated
+    - name: name
+      tier: extended
+      providers: 10
+      share: 0.37
+      type: string
+      spellings:
+      - name
+      - title
+      - Title
+    - name: phone
+      tier: extended
+      providers: 9
+      share: 0.333
+      type: string
+      spellings:
+      - phone
+      - phoneNumber
+      - phone_number
+      - Phone
+    - name: list_id
+      tier: extended
+      providers: 8
+      share: 0.296
+      type: array
+      spellings:
+      - lists
+      - listIds
+      - groups
+      - audience_id
+      - list_id
+      - list_ids
+    - name: tags
+      tier: extended
+      providers: 7
+      share: 0.259
+      type: array
+      spellings:
+      - tags
+      - tag_ids
+    - name: contact_id
+      tier: extended
+      providers: 6
+      share: 0.222
+      type: string
+      spellings:
+      - contact_id
+      - contactId
+    - name: description
+      tier: extended
+      providers: 6
+      share: 0.222
+      type: string
+      spellings:
+      - details
+      - notes
+      - description
+      - Description
+    long_tail_count: 438
+    long_tail_sample:
+    - city
+    - country
+    - job_title
+    - mobile_phone
+    - postal_code
+    - type
+    - birthday
+    - business_phone
+    - company
+    - company_name
+    - created_time
+    - home_phone
+    - phones
+    - source
+    - update_existing
+    - account_id
+    - address
+    - address1
+    - addresses
+    - associations
+    - attachments
+    - bounced_count
+    - click_count
+    - company_id
+    - contact_ids
+    - contact_phone
+    - created_by
+    - date_of_birth
+    - department
+    - external_contact_id
+    - external_id
+    - fax
+    - full_name
+    - language
+    - last_activity_at
+    - last_updated_at
+    - middle_name
+    - open_count
+    - phone_numbers
+    - reply_count
+  segment:
+    segments_seen:
+      segments: 14
+      segment: 3
+    providers_exposing: 15
+    providers_with_readable_schema: 14
+    operations:
+    - operation: GET collection
+      providers: 14
+      share: 0.933
+      tier: core
+    - operation: GET item
+      providers: 11
+      share: 0.733
+      tier: core
+    - operation: DELETE item
+      providers: 9
+      share: 0.6
+      tier: core
+    - operation: POST collection
+      providers: 9
+      share: 0.6
+      tier: core
+    - operation: UPDATE item
+      providers: 8
+      share: 0.533
+      tier: core
+    - operation: DELETE collection
+      providers: 1
+      share: 0.067
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.067
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.067
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 12
+      share: 0.857
+      type: integer
+      spellings:
+      - id
+      - segment_id
+      - objectId
+      - segmentId
+    - name: name
+      tier: core
+      providers: 10
+      share: 0.714
+      type: string
+      spellings:
+      - name
+      - title
+    - name: created_at
+      tier: core
+      providers: 7
+      share: 0.5
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - createdDate
+    - name: type
+      tier: extended
+      providers: 5
+      share: 0.357
+      type: string
+      spellings:
+      - type
+    - name: description
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: string
+      spellings:
+      - description
+    - name: updated_at
+      tier: extended
+      providers: 4
+      share: 0.286
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+    - name: conditions
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: object
+      spellings:
+      - filter
+      - options
+      - conditions
+    - name: list_id
+      tier: extended
+      providers: 3
+      share: 0.214
+      type: integer
+      spellings:
+      - list_id
+    long_tail_count: 88
+    long_tail_sample:
+    - segment_description
+    - admin_email
+    - admin_id
+    - advanced_settings
+    - callback_endpoint
+    - contacts_count
+    - contacts_sample
+    - country_codes
+    - created_by
+    - created_by_name
+    - current_status
+    - deleted_status
+    - dependency_name
+    - depth
+    - edited_at
+    - elements
+    - entries
+    - error_count
+    - error_message
+    - executed_at
+    - expansion_level
+    - expired_status
+    - fields_to_export
+    - folder_id
+    - is_in_progress
+    - is_split_test
+    - is_stale
+    - is_success
+    - language_code
+    - last_calculated_at
+    - last_count
+    - last_modified_date
+    - last_processed_date
+    - match
+    - members
+    - members_added
+    - members_removed
+    - members_to_add
+    - members_to_remove
+    - membership_life_span
+  campaign:
+    segments_seen:
+      campaigns: 24
+      campaign: 6
+      broadcasts: 1
+      broadcast: 1
+      emails: 1
+    providers_exposing: 27
+    providers_with_readable_schema: 25
+    operations:
+    - operation: GET collection
+      providers: 26
+      share: 0.963
+      tier: core
+    - operation: GET item
+      providers: 23
+      share: 0.852
+      tier: core
+    - operation: POST collection
+      providers: 16
+      share: 0.593
+      tier: core
+    - operation: UPDATE item
+      providers: 13
+      share: 0.481
+      tier: extended
+    - operation: DELETE item
+      providers: 12
+      share: 0.444
+      tier: extended
+    - operation: POST item
+      providers: 4
+      share: 0.148
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 3
+      share: 0.111
+      tier: long-tail
+    - operation: UPDATE collection
+      providers: 1
+      share: 0.037
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 23
+      share: 0.92
+      type: string
+      spellings:
+      - id
+      - campaignId
+      - uuid
+      - campaign_id
+      - _id
+      - CampaignID
+    - name: status
+      tier: core
+      providers: 18
+      share: 0.72
+      type: string
+      spellings:
+      - status
+      - campaignStatus
+      - state
+    - name: created_at
+      tier: core
+      providers: 17
+      share: 0.68
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - create_time
+      - created
+      - creation_date
+    - name: name
+      tier: core
+      providers: 16
+      share: 0.64
+      type: string
+      spellings:
+      - name
+    - name: updated_at
+      tier: extended
+      providers: 11
+      share: 0.44
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+      - modified
+    - name: type
+      tier: extended
+      providers: 10
+      share: 0.4
+      type: string
+      spellings:
+      - type
+      - campaign_type
+      - campaignType
+    - name: sent_at
+      tier: extended
+      providers: 9
+      share: 0.36
+      type: string
+      spellings:
+      - scheduled_at
+      - sent_at
+      - send_at
+      - send_time
+      - scheduledAt
+    - name: subject
+      tier: extended
+      providers: 9
+      share: 0.36
+      type: string
+      spellings:
+      - subject
+      - title
+    - name: from_email
+      tier: extended
+      providers: 7
+      share: 0.28
+      type: string
+      spellings:
+      - from
+      - from_email
+      - senderEmail
+      - sender_email
+    - name: list_id
+      tier: extended
+      providers: 6
+      share: 0.24
+      type: array
+      spellings:
+      - listIds
+      - lists
+      - audience_id
+      - list_ids
+      - list_id
+    long_tail_count: 325
+    long_tail_sample:
+    - campaign_name
+    - scheduled_for
+    - template_id
+    - body
+    - clicks
+    - content_type
+    - description
+    - stats
+    - archive_url
+    - body_amp
+    - broadcast_id
+    - content
+    - emails
+    - end_date
+    - from_name
+    - metadata
+    - opens
+    - recipients
+    - result
+    - segment_ids
+    - segment_name
+    - send_date
+    - start_at
+    - start_date
+    - total_sent
+    - ab_split_opts
+    - account_id
+    - account_phone
+    - active
+    - actual_cost
+    - ad_campaign_id
+    - additional_metrics
+    - address_book_id
+    - altbody
+    - anonymous_id
+    - app_id
+    - archive
+    - archive_meta
+    - archive_template_id
+    - archived
+  automation:
+    segments_seen:
+      workflows: 4
+      flows: 3
+      journeys: 2
+      automations: 2
+      sequences: 2
+      automation: 1
+      autoresponders: 1
+    providers_exposing: 14
+    providers_with_readable_schema: 12
+    operations:
+    - operation: GET collection
+      providers: 14
+      share: 1.0
+      tier: core
+    - operation: GET item
+      providers: 9
+      share: 0.643
+      tier: core
+    - operation: POST collection
+      providers: 6
+      share: 0.429
+      tier: extended
+    - operation: UPDATE item
+      providers: 3
+      share: 0.214
+      tier: extended
+    - operation: DELETE item
+      providers: 2
+      share: 0.143
+      tier: long-tail
+    - operation: DELETE collection
+      providers: 1
+      share: 0.071
+      tier: long-tail
+    - operation: POST item
+      providers: 1
+      share: 0.071
+      tier: long-tail
+    properties:
+    - name: id
+      tier: core
+      providers: 8
+      share: 0.667
+      type: string
+      spellings:
+      - id
+    - name: status
+      tier: core
+      providers: 7
+      share: 0.583
+      type: string
+      spellings:
+      - status
+    - name: created_at
+      tier: core
+      providers: 6
+      share: 0.5
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - create_time
+    - name: name
+      tier: core
+      providers: 6
+      share: 0.5
+      type: string
+      spellings:
+      - name
+    - name: type
+      tier: extended
+      providers: 4
+      share: 0.333
+      type: string
+      spellings:
+      - type
+    - name: updated_at
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
+    long_tail_count: 64
+    long_tail_sample:
+    - description
+    - metadata
+    - steps
+    - tags
+    - trigger
+    - action_name
+    - active_definition
+    - aggregation
+    - bot_id
+    - bounds
+    - campaign_context
+    - click_rate
+    - clicks
+    - conversion_rate
+    - conversions
+    - created_by
+    - directory_id
+    - directory_name
+    - draft_definition
+    - dynamic_list_id
+    - emails_sent
+    - engagement_level
+    - expected_revision_id
+    - flow_id
+    - flow_name
+    - is_archived
+    - is_enabled
+    - journey_id
+    - last_modified_at
+    - location_id
+    - mailing_list_id
+    - metrics
+    - name_explicitly_set
+    - next_page_cursor
+    - next_page_url
+    - next_run_time
+    - num_steps
+    - open_rate
+    - opens
+    - owner_id
+  campaign_report:
+    segments_seen:
+      stats: 6
+      metrics: 3
+      summary: 3
+      reports: 1
+    providers_exposing: 11
+    providers_with_readable_schema: 9
+    operations:
+    - operation: GET collection
+      providers: 10
+      share: 0.909
+      tier: core
+    - operation: GET item
+      providers: 2
+      share: 0.182
+      tier: long-tail
+    properties:
+    - name: sent
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: integer
+      spellings:
+      - sent
+      - delivered
+    - name: bounces
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: integer
+      spellings:
+      - bounced
+      - hardBounces
+      - softBounces
+    - name: clicks
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: integer
+      spellings:
+      - clicked
+      - clicks
+      - uniqueClicks
+    - name: id
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: string
+      spellings:
+      - id
+    - name: opens
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: integer
+      spellings:
+      - opened
+      - uniqueOpens
+      - opens
+    - name: unsubscribes
+      tier: extended
+      providers: 3
+      share: 0.333
+      type: array
+      spellings:
+      - unsubscribed
+      - unsubscribes
+    long_tail_count: 133
+    long_tail_sample:
+    - broadcast
+    - revenue
+    - start
+    - 2xx
+    - 3xx
+    - 4xx
+    - 5xx
+    - assisted_orders
+    - assisted_revenue
+    - attempted
+    - broadcasts
+    - campaign_id
+    - campaign_name
+    - campaign_type
+    - code
+    - community
+    - complained
+    - complaints
+    - contact_email_address
+    - contact_id
+    - context
+    - conversion_rate
+    - converted
+    - created_at
+    - currency
+    - date_sent
+    - deferred
+    - delivery
+    - description
+    - drafted
+    - end
+    - entries
+    - error
+    - failed
+    - forwards
+    - from_address
+    - from_name
+    - human_clicked
+    - human_opened
+    - is_split_test

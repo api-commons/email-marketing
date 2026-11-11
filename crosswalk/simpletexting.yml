@@ -1,0 +1,65 @@
+provider: simpletexting
+apis_io: https://apis.io/providers/simpletexting/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - contact-lists
+    properties:
+      name: name
+      id: id
+      created_at: created
+      updated_at: updated
+      description: description
+      list_id: listId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/simpletexting-openapi.yml#DELETE /api/contact-lists/{listIdOrName}
+    - openapi/_original/simpletexting-openapi.yml#GET /api/contact-lists
+    - openapi/_original/simpletexting-openapi.yml#GET /api/contact-lists/{listIdOrName}
+    - openapi/_original/simpletexting-openapi.yml#POST /api/contact-lists
+    - openapi/_original/simpletexting-openapi.yml#PUT /api/contact-lists/{listId}
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      id: id
+      metadata: customFields
+      created_at: created
+      first_name: firstName
+      last_name: lastName
+      status: subscriptionStatus
+      updated_at: updated
+      list_id:
+      - lists
+      - listIds
+      contact_id: contactId
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/simpletexting-openapi.yml#DELETE /api/contact-lists/{listIdOrName}/contacts/{contactPhoneOrId}
+    - openapi/_original/simpletexting-openapi.yml#DELETE /api/contacts/{contactIdOrNumber}
+    - openapi/_original/simpletexting-openapi.yml#GET /api/contacts
+    - openapi/_original/simpletexting-openapi.yml#GET /api/contacts/{contactIdOrNumber}
+    - openapi/_original/simpletexting-openapi.yml#POST /api/contact-lists/{listIdOrName}/contacts
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id:
+      - id
+      - campaignId
+      status: state
+      created_at: created
+      updated_at: modified
+      type: type
+      subject: title
+      list_id:
+      - listIds
+      - lists
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/simpletexting-openapi.yml#GET /api/campaigns
+    - openapi/_original/simpletexting-openapi.yml#GET /api/campaigns/{campaignId}
+    - openapi/_original/simpletexting-openapi.yml#POST /api/campaigns

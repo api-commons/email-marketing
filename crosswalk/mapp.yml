@@ -1,0 +1,25 @@
+provider: mapp
+apis_io: https://apis.io/providers/mapp/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/mapp-engage-openapi.yml#GET /addressAttributes/list
+    - openapi/_original/mapp-engage-openapi.yml#GET /groupAttributes/list
+    - openapi/_original/mapp-engage-openapi.yml#GET /memberAttributes/list
+    - openapi/_original/mapp-engage-openapi.yml#GET /profileAttributes/list
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      name: title
+      description: description
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/mapp-intelligence-analytics-openapi.yml#GET /segments

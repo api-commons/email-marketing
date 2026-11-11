@@ -1,0 +1,16 @@
+provider: netcorecloud
+apis_io: https://apis.io/providers/netcorecloud/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      name: name
+      id: id
+      status: status
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/netcorecloud-whatsapp-api-openapi.yml#GET /v3/metainfo/flow/list
+    - openapi/_original/netcorecloud-whatsapp-api-openapi.yml#GET /v3/metainfo/template/list

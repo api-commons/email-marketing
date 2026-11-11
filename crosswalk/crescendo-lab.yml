@@ -1,0 +1,38 @@
+provider: crescendo-lab
+apis_io: https://apis.io/providers/crescendo-lab/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#GET /sms/list
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      id: id
+      created_at: created_at
+      first_name: first_name
+      last_name: last_name
+      phone: phone
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#GET /contacts
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#POST /contacts
+  campaign:
+    path_segment:
+    - broadcast
+    properties:
+      status: status
+      name: name
+      sent_at: scheduled_at
+      from_email: from
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#GET /broadcast
+    - openapi/_original/crescendo-lab-maacgo-openapi.yaml#POST /broadcast

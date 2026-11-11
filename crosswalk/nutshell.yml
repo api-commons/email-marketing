@@ -1,0 +1,40 @@
+provider: nutshell
+apis_io: https://apis.io/providers/nutshell/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    - audiences
+    properties:
+      name: name
+      id: id
+      description: description
+      type: type
+      metadata: fields
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/nutshell-accounts-api-openapi.yml#GET /accounts/list
+    - openapi/_original/nutshell-api.json#GET /accounts/list
+    - openapi/_original/nutshell-api.json#GET /audiences
+    - openapi/_original/nutshell-api.json#GET /contacts/list
+    - openapi/_original/nutshell-api.json#GET /leads/list
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      email: emails
+      id: id
+      metadata: customFields
+      first_name: firstName
+      last_name: lastName
+      name: name
+      description: description
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/nutshell-api.json#DELETE /contacts/{id}
+    - openapi/_original/nutshell-api.json#GET /contacts
+    - openapi/_original/nutshell-api.json#GET /contacts/{id}
+    - openapi/_original/nutshell-api.json#PATCH /contacts/{id}
+    - openapi/_original/nutshell-api.json#POST /contacts

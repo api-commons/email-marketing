@@ -1,0 +1,87 @@
+provider: sendgrid
+apis_io: https://apis.io/providers/sendgrid/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      metadata: _metadata
+      subscriber_count: contact_count
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#DELETE /v3/contactdb/lists
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#DELETE /v3/contactdb/lists/{list_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/lists
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/lists/{list_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/recipients/{recipient_id}/lists
+  subscriber:
+    path_segment:
+    - contacts
+    - recipients
+    properties:
+      email: email
+      id: id
+      metadata:
+      - custom_fields
+      - _metadata
+      created_at: created_at
+      first_name: first_name
+      last_name: last_name
+      updated_at: updated_at
+      phone: phone_number
+      list_id: list_ids
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#DELETE /v3/contactdb/lists/{list_id}/recipients/{recipient_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/lists/{list_id}/recipients
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#POST /v3/contactdb/lists/{list_id}/recipients
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#POST /v3/contactdb/lists/{list_id}/recipients/{recipient_id}
+    - openapi/_original/tsg_mc_contacts_v3.yaml#DELETE /v3/marketing/contacts
+  segment:
+    path_segment:
+    - segments
+    properties:
+      id: id
+      name: name
+      created_at: created_at
+      updated_at: updated_at
+      conditions: conditions
+      list_id: list_id
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#DELETE /v3/contactdb/segments/{segment_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/segments
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#GET /v3/contactdb/segments/{segment_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#PATCH /v3/contactdb/segments/{segment_id}
+    - openapi/_original/tsg_lmc_contactdb_v3.yaml#POST /v3/contactdb/segments
+  campaign:
+    path_segment:
+    - campaigns
+    - emails
+    properties:
+      id: id
+      status: status
+      subject:
+      - title
+      - subject
+      list_id: list_ids
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/tsg_lmc_campaigns_v3.yaml#DELETE /v3/campaigns/{campaign_id}
+    - openapi/_original/tsg_lmc_campaigns_v3.yaml#GET /v3/campaigns
+    - openapi/_original/tsg_lmc_campaigns_v3.yaml#GET /v3/campaigns/{campaign_id}
+    - openapi/_original/tsg_lmc_campaigns_v3.yaml#PATCH /v3/campaigns/{campaign_id}
+    - openapi/_original/tsg_lmc_campaigns_v3.yaml#POST /v3/campaigns
+  automation:
+    path_segment:
+    - automations
+    properties:
+      id: id
+    core_coverage: 0.25
+    evidence:
+    - openapi/_original/tsg_mc_stats_v3.yaml#GET /v3/marketing/stats/automations
+    - openapi/_original/tsg_mc_stats_v3.yaml#GET /v3/marketing/stats/automations/{id}

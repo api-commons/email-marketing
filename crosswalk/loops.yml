@@ -1,0 +1,45 @@
+provider: loops
+apis_io: https://apis.io/providers/loops/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      description: description
+    core_coverage: 0.5
+    evidence:
+    - openapi/_original/loops-openapi.yaml#GET /v1/lists
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/loops-openapi.yaml#GET /v1/campaigns
+    - openapi/_original/loops-openapi.yaml#GET /v1/campaigns/{campaignId}
+    - openapi/_original/loops-openapi.yaml#POST /v1/campaigns
+    - openapi/_original/loops-openapi.yaml#POST /v1/campaigns/{campaignId}
+  automation:
+    path_segment:
+    - workflows
+    properties:
+      id: id
+      status: status
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/loops-openapi.yaml#GET /v1/workflows
+    - openapi/_original/loops-openapi.yaml#GET /v1/workflows/{workflowId}
+    - openapi/_original/loops-openapi.yaml#POST /v1/workflows
+    - openapi/_original/loops-openapi.yaml#POST /v1/workflows/{workflowId}

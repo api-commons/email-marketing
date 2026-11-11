@@ -1,0 +1,38 @@
+provider: voyant
+apis_io: https://apis.io/providers/voyant/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/voyant-openapi-original.json#GET /api/signals/list
+  subscriber:
+    path_segment:
+    - profiles
+    - contacts
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/voyant-openapi-original.json#GET /api/content-voices/quality/profiles
+    - openapi/_original/voyant-openapi-original.json#GET /api/content-voices/quality/profiles/{content_type}
+    - openapi/_original/voyant-openapi-original.json#POST /api/crm/sync/contacts
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      name: name
+      updated_at: updated_at
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/voyant-gypsum-openapi.json#GET /api/campaigns
+    - openapi/_original/voyant-gypsum-openapi.json#GET /api/campaigns/{id}
+    - openapi/_original/voyant-gypsum-openapi.json#POST /api/campaigns
+    - openapi/_original/voyant-gypsum-openapi.json#PUT /api/campaigns/{id}
+    - openapi/_original/voyant-openapi-original.json#GET /api/attribution/reports/campaigns

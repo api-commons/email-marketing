@@ -1,0 +1,71 @@
+provider: emailoctopus
+apis_io: https://apis.io/providers/emailoctopus/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    properties:
+      name: name
+      id: id
+      created_at: created_at
+      metadata: fields
+    core_coverage: 0.75
+    evidence:
+    - openapi/_original/emailoctopus-openapi.yml#DELETE /lists/{list_id}
+    - openapi/_original/emailoctopus-openapi.yml#GET /lists
+    - openapi/_original/emailoctopus-openapi.yml#GET /lists/{list_id}
+    - openapi/_original/emailoctopus-openapi.yml#POST /lists
+    - openapi/_original/emailoctopus-openapi.yml#PUT /lists/{list_id}
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      email: email_address
+      id: id
+      metadata: fields
+      created_at: created_at
+      status: status
+      tags: tags
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/emailoctopus-openapi.yml#DELETE /lists/{list_id}/contacts/{contact_id}
+    - openapi/_original/emailoctopus-openapi.yml#GET /lists/{list_id}/contacts
+    - openapi/_original/emailoctopus-openapi.yml#GET /lists/{list_id}/contacts/{contact_id}
+    - openapi/_original/emailoctopus-openapi.yml#POST /lists/{list_id}/contacts
+    - openapi/_original/emailoctopus-openapi.yml#PUT /lists/{list_id}/contacts
+  campaign:
+    path_segment:
+    - campaigns
+    properties:
+      id: id
+      status: status
+      created_at: created_at
+      name: name
+      sent_at: sent_at
+      subject: subject
+      from_email: from
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/emailoctopus-openapi.yml#GET /campaigns
+    - openapi/_original/emailoctopus-openapi.yml#GET /campaigns/{campaign_id}
+    - openapi/_original/emailoctopus-v2-openapi.json#GET /campaigns
+    - openapi/_original/emailoctopus-v2-openapi.json#GET /campaigns/{campaign_id}
+  campaign_report:
+    path_segment:
+    - reports
+    - summary
+    properties:
+      sent: sent
+      bounces: bounced
+      clicks: clicked
+      id: id
+      opens: opened
+      unsubscribes: unsubscribed
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/emailoctopus-openapi.yml#GET /campaigns/{campaign_id}/reports
+    - openapi/_original/emailoctopus-openapi.yml#GET /campaigns/{campaign_id}/reports/summary
+    - openapi/_original/emailoctopus-v2-openapi.json#GET /campaigns/{campaign_id}/reports
+    - openapi/_original/emailoctopus-v2-openapi.json#GET /campaigns/{campaign_id}/reports/summary

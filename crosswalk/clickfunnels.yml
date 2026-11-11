@@ -1,0 +1,12 @@
+provider: clickfunnels
+apis_io: https://apis.io/providers/clickfunnels/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - stats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/clickfunnels-openapi.json#GET /emails/broadcasts/{broadcast_id}/stats

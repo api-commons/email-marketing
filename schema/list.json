@@ -1,0 +1,146 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/api-commons/email-marketing/main/schema/list.json",
+  "title": "List",
+  "description": "The common list in Email Marketing, distilled from 39 providers' own OpenAPI. Each property records the share of them that declare it.",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.846,
+      "x-commons-providers": 33,
+      "x-commons-spellings": [
+        "name",
+        "title",
+        "label",
+        "displayName"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.769,
+      "x-commons-providers": 30,
+      "x-commons-spellings": [
+        "id",
+        "uuid",
+        "_id",
+        "guid"
+      ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.667,
+      "x-commons-providers": 26,
+      "x-commons-spellings": [
+        "createdAt",
+        "created_at",
+        "created",
+        "date_created",
+        "creation_date",
+        "dateCreated",
+        "createdDate",
+        "create_time"
+      ],
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.513,
+      "x-commons-providers": 20,
+      "x-commons-spellings": [
+        "updatedAt",
+        "updated_at",
+        "updated",
+        "update_time"
+      ],
+      "format": "date-time"
+    },
+    "description": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.436,
+      "x-commons-providers": 17,
+      "x-commons-spellings": [
+        "description",
+        "notes",
+        "details"
+      ]
+    },
+    "type": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.41,
+      "x-commons-providers": 16,
+      "x-commons-spellings": [
+        "type"
+      ]
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.359,
+      "x-commons-providers": 14,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "subscription_status"
+      ]
+    },
+    "metadata": {
+      "type": "object",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.256,
+      "x-commons-providers": 10,
+      "x-commons-spellings": [
+        "attributes",
+        "fields",
+        "metadata",
+        "_metadata",
+        "customFields"
+      ]
+    },
+    "list_id": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.231,
+      "x-commons-providers": 9,
+      "x-commons-spellings": [
+        "listId",
+        "list_id",
+        "list_ids",
+        "groupId",
+        "groups"
+      ]
+    },
+    "subscriber_count": {
+      "type": "integer",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.205,
+      "x-commons-providers": 8,
+      "x-commons-spellings": [
+        "member_count",
+        "total_subscribers",
+        "totalSubscribers",
+        "size",
+        "subscriber_count",
+        "stats",
+        "contact_count"
+      ]
+    }
+  },
+  "required": [
+    "id"
+  ],
+  "x-commons": {
+    "context": "email-marketing",
+    "concept": "list",
+    "providers": 39,
+    "generated": "2026-11-10",
+    "version": "0.1.0-draft.20261110",
+    "status": "draft"
+  }
+}

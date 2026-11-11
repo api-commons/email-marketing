@@ -1,0 +1,347 @@
+context: email-marketing
+generated: '2026-11-10'
+adopters:
+- provider: act
+  apis_io: https://apis.io/providers/act/
+  crosswalk: crosswalk/act.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: act-on
+  apis_io: https://apis.io/providers/act-on/
+  crosswalk: crosswalk/act-on.yml
+  concepts:
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: activecampaign
+  apis_io: https://apis.io/providers/activecampaign/
+  crosswalk: crosswalk/activecampaign.yml
+  concepts:
+  - list
+- provider: agile-crm
+  apis_io: https://apis.io/providers/agile-crm/
+  crosswalk: crosswalk/agile-crm.yml
+  concepts:
+  - automation
+  - list
+  - subscriber
+- provider: autoleadstar
+  apis_io: https://apis.io/providers/autoleadstar/
+  crosswalk: crosswalk/autoleadstar.yml
+  concepts:
+  - list
+- provider: aweber
+  apis_io: https://apis.io/providers/aweber/
+  crosswalk: crosswalk/aweber.yml
+  concepts:
+  - campaign
+  - campaign_report
+  - list
+  - segment
+  - subscriber
+- provider: benchmark-email
+  apis_io: https://apis.io/providers/benchmark-email/
+  crosswalk: crosswalk/benchmark-email.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: blueshift
+  apis_io: https://apis.io/providers/blueshift/
+  crosswalk: crosswalk/blueshift.yml
+  concepts:
+  - campaign
+  - list
+- provider: braze
+  apis_io: https://apis.io/providers/braze/
+  crosswalk: crosswalk/braze.yml
+  concepts:
+  - list
+  - segment
+- provider: brevo
+  apis_io: https://apis.io/providers/brevo/
+  crosswalk: crosswalk/brevo.yml
+  concepts:
+  - list
+  - segment
+  - subscriber
+- provider: clickfunnels
+  apis_io: https://apis.io/providers/clickfunnels/
+  crosswalk: crosswalk/clickfunnels.yml
+  concepts:
+  - campaign_report
+- provider: commsharbor
+  apis_io: https://apis.io/providers/commsharbor/
+  crosswalk: crosswalk/commsharbor.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: constant-contact
+  apis_io: https://apis.io/providers/constant-contact/
+  crosswalk: crosswalk/constant-contact.yml
+  concepts:
+  - automation
+  - list
+  - segment
+  - subscriber
+- provider: convertkit
+  apis_io: https://apis.io/providers/convertkit/
+  crosswalk: crosswalk/convertkit.yml
+  concepts:
+  - campaign_report
+- provider: crescendo-lab
+  apis_io: https://apis.io/providers/crescendo-lab/
+  crosswalk: crosswalk/crescendo-lab.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: customer-io
+  apis_io: https://apis.io/providers/customer-io/
+  crosswalk: crosswalk/customer-io.yml
+  concepts:
+  - campaign_report
+- provider: dotdigital
+  apis_io: https://apis.io/providers/dotdigital/
+  crosswalk: crosswalk/dotdigital.yml
+  concepts:
+  - campaign_report
+- provider: eloqua
+  apis_io: https://apis.io/providers/eloqua/
+  crosswalk: crosswalk/eloqua.yml
+  concepts:
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: emailoctopus
+  apis_io: https://apis.io/providers/emailoctopus/
+  crosswalk: crosswalk/emailoctopus.yml
+  concepts:
+  - campaign
+  - campaign_report
+  - list
+  - subscriber
+- provider: getresponse
+  apis_io: https://apis.io/providers/getresponse/
+  crosswalk: crosswalk/getresponse.yml
+  concepts:
+  - campaign_report
+- provider: highlevel
+  apis_io: https://apis.io/providers/highlevel/
+  crosswalk: crosswalk/highlevel.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: hubspot
+  apis_io: https://apis.io/providers/hubspot/
+  crosswalk: crosswalk/hubspot.yml
+  concepts:
+  - list
+  - subscriber
+- provider: incentivio
+  apis_io: https://apis.io/providers/incentivio/
+  crosswalk: crosswalk/incentivio.yml
+  concepts:
+  - campaign
+  - list
+  - segment
+- provider: inflectionio
+  apis_io: https://apis.io/providers/inflectionio/
+  crosswalk: crosswalk/inflectionio.yml
+  concepts:
+  - automation
+  - list
+  - subscriber
+- provider: iterable
+  apis_io: https://apis.io/providers/iterable/
+  crosswalk: crosswalk/iterable.yml
+  concepts:
+  - automation
+  - campaign
+  - campaign_report
+  - list
+- provider: klaviyo
+  apis_io: https://apis.io/providers/klaviyo/
+  crosswalk: crosswalk/klaviyo.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: listmonk
+  apis_io: https://apis.io/providers/listmonk/
+  crosswalk: crosswalk/listmonk.yml
+  concepts:
+  - campaign
+  - campaign_report
+  - list
+  - subscriber
+- provider: listrak
+  apis_io: https://apis.io/providers/listrak/
+  crosswalk: crosswalk/listrak.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: liveintent
+  apis_io: https://apis.io/providers/liveintent/
+  crosswalk: crosswalk/liveintent.yml
+  concepts:
+  - list
+- provider: localytics
+  apis_io: https://apis.io/providers/localytics/
+  crosswalk: crosswalk/localytics.yml
+  concepts:
+  - campaign
+  - list
+- provider: loops
+  apis_io: https://apis.io/providers/loops/
+  crosswalk: crosswalk/loops.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+- provider: mailchimp
+  apis_io: https://apis.io/providers/mailchimp/
+  crosswalk: crosswalk/mailchimp.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: mapp
+  apis_io: https://apis.io/providers/mapp/
+  crosswalk: crosswalk/mapp.yml
+  concepts:
+  - list
+  - segment
+- provider: marketo
+  apis_io: https://apis.io/providers/marketo/
+  crosswalk: crosswalk/marketo.yml
+  concepts:
+  - campaign
+  - list
+  - segment
+- provider: moosend
+  apis_io: https://apis.io/providers/moosend/
+  crosswalk: crosswalk/moosend.yml
+  concepts:
+  - campaign_report
+- provider: netcorecloud
+  apis_io: https://apis.io/providers/netcorecloud/
+  crosswalk: crosswalk/netcorecloud.yml
+  concepts:
+  - list
+- provider: nutshell
+  apis_io: https://apis.io/providers/nutshell/
+  crosswalk: crosswalk/nutshell.yml
+  concepts:
+  - list
+  - subscriber
+- provider: pomo
+  apis_io: https://apis.io/providers/pomo/
+  crosswalk: crosswalk/pomo.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - subscriber
+- provider: responsys
+  apis_io: https://apis.io/providers/responsys/
+  crosswalk: crosswalk/responsys.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: sendgrid
+  apis_io: https://apis.io/providers/sendgrid/
+  crosswalk: crosswalk/sendgrid.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: sendlane
+  apis_io: https://apis.io/providers/sendlane/
+  crosswalk: crosswalk/sendlane.yml
+  concepts:
+  - campaign
+  - list
+  - segment
+  - subscriber
+- provider: sendpulse
+  apis_io: https://apis.io/providers/sendpulse/
+  crosswalk: crosswalk/sendpulse.yml
+  concepts:
+  - automation
+  - campaign
+  - list
+  - subscriber
+- provider: simpletexting
+  apis_io: https://apis.io/providers/simpletexting/
+  crosswalk: crosswalk/simpletexting.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: splio
+  apis_io: https://apis.io/providers/splio/
+  crosswalk: crosswalk/splio.yml
+  concepts:
+  - list
+  - subscriber
+- provider: stannp
+  apis_io: https://apis.io/providers/stannp/
+  crosswalk: crosswalk/stannp.yml
+  concepts:
+  - list
+- provider: supaglue
+  apis_io: https://apis.io/providers/supaglue/
+  crosswalk: crosswalk/supaglue.yml
+  concepts:
+  - automation
+  - list
+  - subscriber
+- provider: usecommune
+  apis_io: https://apis.io/providers/usecommune/
+  crosswalk: crosswalk/usecommune.yml
+  concepts:
+  - campaign_report
+- provider: vbout
+  apis_io: https://apis.io/providers/vbout/
+  crosswalk: crosswalk/vbout.yml
+  concepts:
+  - campaign
+  - list
+- provider: vessel
+  apis_io: https://apis.io/providers/vessel/
+  crosswalk: crosswalk/vessel.yml
+  concepts:
+  - automation
+  - list
+  - subscriber
+- provider: voyant
+  apis_io: https://apis.io/providers/voyant/
+  crosswalk: crosswalk/voyant.yml
+  concepts:
+  - campaign
+  - list
+  - subscriber
+- provider: xiaoman
+  apis_io: https://apis.io/providers/xiaoman/
+  crosswalk: crosswalk/xiaoman.yml
+  concepts:
+  - list

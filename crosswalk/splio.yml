@@ -1,0 +1,33 @@
+provider: splio
+apis_io: https://apis.io/providers/splio/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    - list
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/v1/lists
+    - openapi/_original/splio-customer-platform-openapi.json#GET /target/groups/list
+    - openapi/_original/splio-doc-swagger2.json#GET /data/v1/lists
+    - openapi/_original/splio-doc-swagger2.json#GET /target/groups/list
+  subscriber:
+    path_segment:
+    - contacts
+    properties:
+      email: email
+      metadata: custom_fields
+      created_at: creation_date
+      first_name: firstname
+      last_name: lastname
+      list_id: lists
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/contacts/bulk
+    - openapi/_original/splio-customer-platform-openapi.json#DELETE /data/contacts/{id}
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/contacts/{individual_id}
+    - openapi/_original/splio-customer-platform-openapi.json#GET /data/fields/contacts

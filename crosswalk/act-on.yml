@@ -1,0 +1,67 @@
+provider: act-on
+apis_io: https://apis.io/providers/act-on/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    properties:
+      status: status
+      list_id: listId
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/act-on-api-1.json#DELETE /api/1/list/{listid}
+    - openapi/_original/act-on-api-1.json#GET /api/1/list
+    - openapi/_original/act-on-api-1.json#GET /api/1/list/{listid}
+    - openapi/_original/act-on-api-1.json#POST /api/1/list
+    - openapi/_original/act-on-api-1.json#PUT /api/1/list/{listid}
+  subscriber:
+    path_segment:
+    - contacts
+    - contact
+    properties:
+      email: email
+      id: id
+      metadata: customFields
+      created_at: createdDate
+      first_name: firstName
+      last_name: lastName
+      status: status
+      updated_at: updatedDate
+      name: title
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/segment/{segmentId}/contacts
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/segment/{segmentId}/email/contact
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/segment/{segmentId}/externalId/contacts
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/contact/
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/segment/{segmentId}/contacts
+  segment:
+    path_segment:
+    - segment
+    - segments
+    properties:
+      id:
+      - objectId
+      - id
+      name: name
+      type: type
+      conditions: filter
+    core_coverage: 0.667
+    evidence:
+    - openapi/_original/act-on-api-1.json#DELETE /ucl/v2/{accountId}/segment/{segmentId}
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/contactReport/email/{emailAddress}/segments
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/contactReport/externalId/{objectType}/{externalId}/segments
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/contactReport/id/{id}/segments
+    - openapi/_original/act-on-api-1.json#GET /ucl/v2/{accountId}/segment/
+  campaign:
+    path_segment:
+    - campaigns
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/act-on-api-1.json#GET /api/1/campaigns
+    - openapi/_original/act-on-api-1.json#GET /api/1/campaigns/{id}
+    - openapi/_original/act-on-rest-api-openapi.yml#GET /api/1/campaigns
+    - openapi/_original/act-on-rest-api-openapi.yml#GET /api/1/campaigns/{id}

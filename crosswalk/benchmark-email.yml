@@ -1,0 +1,74 @@
+provider: benchmark-email
+apis_io: https://apis.io/providers/benchmark-email/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - lists
+    - list
+    properties:
+      name: name
+      id: _id
+      created_at: createdAt
+      updated_at: updatedAt
+      type: type
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/benchmark-email-api-openapi.json#DELETE /api/contact-structure/{contactStructureId}/lists
+    - openapi/_original/benchmark-email-api-openapi.json#DELETE /api/contact-structure/{contactStructureId}/lists/{listId}
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/contact-structure/{contactStructureId}/lists
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/contact-structure/{contactStructureId}/lists/{listId}
+    - openapi/_original/benchmark-email-api-openapi.json#PATCH /api/contact-structure/{contactStructureId}/lists/{listId}
+  subscriber:
+    path_segment:
+    - contact
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/benchmark-email-api-openapi.json#DELETE /api/contact/{contactId}
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/contact
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/contact/{contactId}
+    - openapi/_original/benchmark-email-api-openapi.json#PATCH /api/contact/{contactId}
+    - openapi/_original/benchmark-email-api-openapi.json#POST /api/contact
+  segment:
+    path_segment:
+    - segments
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#DELETE /Contact/Segments/{SegmentID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Contact/Segments
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Contact/Segments/{SegmentID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#PATCH /Contact/Segments/{SegmentID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#POST /Contact/{ListID}/Segments
+  campaign:
+    path_segment:
+    - campaign
+    properties:
+      id: _id
+      status: status
+      created_at: createdAt
+      name: name
+      updated_at: updatedAt
+      sent_at: scheduledAt
+      subject: subject
+      from_email: from
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/benchmark-email-api-openapi.json#DELETE /api/email/campaign/{campaignId}
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/email/campaign
+    - openapi/_original/benchmark-email-api-openapi.json#GET /api/email/campaign/{campaignId}
+    - openapi/_original/benchmark-email-api-openapi.json#PATCH /api/email/campaign/{campaignId}
+    - openapi/_original/benchmark-email-api-openapi.json#POST /api/email/campaign
+  automation:
+    path_segment:
+    - automation
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#DELETE /Automation/{AutomationID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Automation
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#GET /Automation/{AutomationID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#PATCH /Automation/{AutomationID}
+    - openapi/_original/benchmark-email-benchmark-email-api-openapi.yml#POST /Automation/

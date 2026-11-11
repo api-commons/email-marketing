@@ -1,0 +1,65 @@
+provider: vessel
+apis_io: https://apis.io/providers/vessel/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  list:
+    path_segment:
+    - list
+    - lists
+    properties:
+      name:
+      - name
+      - displayName
+      - title
+      id:
+      - id
+      - guid
+      created_at:
+      - createdAt
+      - dateCreated
+      - createdDate
+      updated_at: updatedAt
+      description: notes
+      type: type
+      status:
+      - status
+      - state
+      metadata: customFields
+      list_id:
+      - groupId
+      - groups
+    core_coverage: 1.0
+    evidence:
+    - openapi/_original/vessel-activecampaign-actions-openapi.yml#POST /api/actions/activecampaign/contacts/list
+    - openapi/_original/vessel-activecampaign-actions-openapi.yml#POST /api/actions/activecampaign/lists/list
+    - openapi/_original/vessel-activecampaign-actions-openapi.yml#POST /api/actions/activecampaign/users/list
+    - openapi/_original/vessel-aircall-actions-openapi.yml#POST /api/actions/aircall/calls/list
+    - openapi/_original/vessel-aircall-actions-openapi.yml#POST /api/actions/aircall/contacts/list
+  subscriber:
+    path_segment:
+    - contact
+    - contacts
+    properties:
+      email:
+      - email
+      - emails
+      id: id
+      metadata: customFields
+      first_name: firstName
+      last_name: lastName
+      phone: phone
+    core_coverage: 0.833
+    evidence:
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contact/batch
+    - openapi/_original/vessel-crm-v1-openapi.yml#GET /crm/contacts
+    - openapi/_original/vessel-crm-v1-openapi.yml#PATCH /crm/contact
+    - openapi/_original/vessel-crm-v1-openapi.yml#POST /crm/contact
+  automation:
+    path_segment:
+    - sequences
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/sequences

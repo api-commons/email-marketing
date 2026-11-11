@@ -1,0 +1,13 @@
+provider: convertkit
+apis_io: https://apis.io/providers/convertkit/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - stats
+    properties: {}
+    core_coverage: 0.0
+    evidence:
+    - openapi/_original/openapi.json#GET /v4/broadcasts/stats
+    - openapi/_original/openapi.json#GET /v4/broadcasts/{broadcast_id}/stats

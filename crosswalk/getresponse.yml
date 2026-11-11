@@ -1,0 +1,13 @@
+provider: getresponse
+apis_io: https://apis.io/providers/getresponse/
+context: email-marketing
+generated: '2026-11-10'
+concepts:
+  campaign_report:
+    path_segment:
+    - summary
+    properties: {}
+    core_coverage: null
+    evidence:
+    - openapi/_original/getresponse-campaigns-lists-openapi.yml#GET /campaigns/statistics/summary
+    - openapi/_original/getresponse-open-api-original.json#GET /campaigns/statistics/summary
