@@ -9,6 +9,7 @@ concepts:
     properties:
       name: name
       id: id
+      type: type
       status: status
     core_coverage: 0.5
     evidence:

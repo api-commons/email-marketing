@@ -86,17 +86,6 @@
         "LastName"
       ]
     },
-    "status": {
-      "type": "string",
-      "x-commons-tier": "extended",
-      "x-commons-share": 0.444,
-      "x-commons-providers": 12,
-      "x-commons-spellings": [
-        "status",
-        "state",
-        "subscriptionStatus"
-      ]
-    },
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
@@ -111,6 +100,17 @@
         "updated"
       ],
       "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "x-commons-tier": "extended",
+      "x-commons-share": 0.407,
+      "x-commons-providers": 11,
+      "x-commons-spellings": [
+        "status",
+        "state",
+        "subscriptionStatus"
+      ]
     },
     "name": {
       "type": "string",

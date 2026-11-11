@@ -40,8 +40,8 @@ concepts:
     - campaigns
     properties:
       id: id
-      status: status
       created_at: created_at
+      status: status
       name: name
       sent_at: sent_at
       subject: subject
@@ -57,10 +57,10 @@ concepts:
     - reports
     - summary
     properties:
+      id: id
       sent: sent
       bounces: bounced
       clicks: clicked
-      id: id
       opens: opened
       unsubscribes: unsubscribed
     core_coverage: 0.0

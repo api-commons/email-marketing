@@ -8,8 +8,8 @@
     "id": {
       "type": "string",
       "x-commons-tier": "core",
-      "x-commons-share": 0.92,
-      "x-commons-providers": 23,
+      "x-commons-share": 0.96,
+      "x-commons-providers": 24,
       "x-commons-spellings": [
         "id",
         "campaignId",
@@ -18,6 +18,20 @@
         "_id",
         "CampaignID"
       ]
+    },
+    "created_at": {
+      "type": "string",
+      "x-commons-tier": "core",
+      "x-commons-share": 0.76,
+      "x-commons-providers": 19,
+      "x-commons-spellings": [
+        "created_at",
+        "createdAt",
+        "create_time",
+        "created",
+        "creation_date"
+      ],
+      "format": "date-time"
     },
     "status": {
       "type": "string",
@@ -29,20 +43,6 @@
         "campaignStatus",
         "state"
       ]
-    },
-    "created_at": {
-      "type": "string",
-      "x-commons-tier": "core",
-      "x-commons-share": 0.68,
-      "x-commons-providers": 17,
-      "x-commons-spellings": [
-        "created_at",
-        "createdAt",
-        "create_time",
-        "created",
-        "creation_date"
-      ],
-      "format": "date-time"
     },
     "name": {
       "type": "string",
@@ -56,11 +56,11 @@
     "updated_at": {
       "type": "string",
       "x-commons-tier": "extended",
-      "x-commons-share": 0.44,
-      "x-commons-providers": 11,
+      "x-commons-share": 0.48,
+      "x-commons-providers": 12,
       "x-commons-spellings": [
-        "updatedAt",
         "updated_at",
+        "updatedAt",
         "modified"
       ],
       "format": "date-time"

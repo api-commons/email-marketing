@@ -6,7 +6,8 @@ concepts:
   campaign_report:
     path_segment:
     - stats
-    properties: {}
+    properties:
+      id: id
     core_coverage: 0.0
     evidence:
     - openapi/_original/openapi.json#GET /v4/broadcasts/stats

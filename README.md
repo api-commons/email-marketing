@@ -12,11 +12,11 @@ generated. Every number below is a count of providers.
 <!-- commons:summary -->
 | Concept | Expose it | Readable schema | Core properties (share) | Collection named |
 | --- | ---: | ---: | --- | --- |
-| list | 44 | 39 | name 85%, id 77%, created_at 67%, updated_at 51% | lists 22, list 22, audiences 9, contact_lists 1 |
+| list | 44 | 39 | name 85%, id 82%, created_at 67%, updated_at 51% | lists 22, list 22, audiences 9, contact_lists 1 |
 | subscriber | 29 | 27 | email 78%, id 78%, metadata 70%, created_at 63%, first_name 63%, last_name 63% | contacts 23, contact 8, members 5, profiles 3 |
-| segment | 15 | 14 | id 86%, name 71%, created_at 50% | segments 14, segment 3 |
-| campaign | 27 | 25 | id 92%, status 72%, created_at 68%, name 64% | campaigns 24, campaign 6, broadcasts 1, broadcast 1 |
-| automation | 14 | 12 | id 67%, status 58%, created_at 50%, name 50% | workflows 4, flows 3, journeys 2, automations 2 |
+| segment | 15 | 14 | id 93%, name 71%, created_at 50% | segments 14, segment 3 |
+| campaign | 27 | 25 | id 96%, created_at 76%, status 72%, name 64% | campaigns 24, campaign 6, broadcasts 1, broadcast 1 |
+| automation | 14 | 12 | id 83%, name 67%, created_at 58%, status 58% | workflows 4, flows 3, journeys 2, automations 2 |
 | campaign_report | 11 | 9 |  | stats 6, metrics 3, summary 3, reports 1 |
 
 Cohort: 102 providers with harvested OpenAPI, 51 crosswalks. Of the providers exposing a list: 64% create, 96% list, 61% fetch, 46% update, 46% delete. Generated 2026-11-10 by build.py.

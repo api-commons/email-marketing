@@ -40,9 +40,10 @@ concepts:
       - last_name
       - LastName
       - lastname
-      status: state
       updated_at: updated_at
+      status: state
       name:
+      - title
       - Title
       - name
       phone:
@@ -64,10 +65,13 @@ concepts:
     - sequences
     properties:
       id: id
+      name:
+      - name
+      - title
       created_at: created_at
-      name: name
       type: type
       updated_at: updated_at
+      tags: tags
     core_coverage: 0.75
     evidence:
     - openapi/_original/supaglue-engagement-api-openapi.yml#GET /sequences

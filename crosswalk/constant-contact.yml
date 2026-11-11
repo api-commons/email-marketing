@@ -29,7 +29,6 @@ concepts:
       created_at: created_at
       first_name: first_name
       last_name: last_name
-      status: status
       updated_at: updated_at
       name: name
       contact_id: contact_id
@@ -60,9 +59,10 @@ concepts:
     - workflows
     properties:
       id: id
-      status: status
       name: name
+      status: status
       type: type
+      description: description
     core_coverage: 0.75
     evidence:
     - openapi/_original/constant-contact-v3-openapi.yml#GET /automations/workflows

@@ -52,8 +52,8 @@ concepts:
       id:
       - id
       - campaign_id
-      status: status
       created_at: created_at
+      status: status
       name: name
       updated_at: updated_at
       type: campaign_type

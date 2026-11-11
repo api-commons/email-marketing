@@ -19,8 +19,9 @@ concepts:
       - createdAt
       - dateCreated
       - createdDate
+      - created
       updated_at: updatedAt
-      description: notes
+      description: description
       type: type
       status:
       - status
@@ -59,7 +60,10 @@ concepts:
   automation:
     path_segment:
     - sequences
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      tags: tags
+    core_coverage: 0.5
     evidence:
     - openapi/_original/vessel-engagement-v1-openapi.yml#GET /engagement/sequences

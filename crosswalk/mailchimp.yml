@@ -15,6 +15,7 @@ concepts:
       id: id
       created_at:
       - date_created
+      - timestamp_opt
       - created_at
       updated_at: updated_at
       description:
@@ -22,8 +23,9 @@ concepts:
       - notes
       type: type
       status:
-      - state
       - status
+      - state
+      metadata: merge_fields
       subscriber_count: stats
     core_coverage: 1.0
     evidence:
@@ -43,8 +45,8 @@ concepts:
       created_at:
       - created_at
       - timestamp_opt
-      status: status
       updated_at: last_changed
+      status: status
       list_id:
       - audience_id
       - list_id
@@ -66,8 +68,6 @@ concepts:
       created_at: created_at
       type: type
       updated_at: updated_at
-      conditions: options
-      list_id: list_id
     core_coverage: 1.0
     evidence:
     - openapi/_original/mailchimp-marketing-api-openapi-original.json#DELETE /lists/{list_id}/segments/{segment_id}
@@ -80,8 +80,8 @@ concepts:
     - campaigns
     properties:
       id: id
-      status: status
       created_at: create_time
+      status: status
       type: type
       sent_at: send_time
     core_coverage: 0.75
@@ -96,8 +96,8 @@ concepts:
     - automations
     properties:
       id: id
-      status: status
       created_at: create_time
+      status: status
     core_coverage: 0.75
     evidence:
     - openapi/_original/mailchimp-marketing-api-openapi-original.json#GET /automations

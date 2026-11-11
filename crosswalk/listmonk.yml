@@ -33,8 +33,8 @@ concepts:
       - id
       - uuid
       created_at: created_at
-      status: status
       updated_at: updated_at
+      status: status
       name: name
       list_id: lists
     core_coverage: 0.5
@@ -52,8 +52,8 @@ concepts:
       - id
       - CampaignID
       - uuid
-      status: status
       created_at: created_at
+      status: status
       name: name
       updated_at: updated_at
       type: type
@@ -72,8 +72,8 @@ concepts:
     path_segment:
     - stats
     properties:
-      sent: sent
       id: id
+      sent: sent
     core_coverage: 0.0
     evidence:
     - openapi/_original/listmonk-collections-openapi.yml#GET /campaigns/running/stats

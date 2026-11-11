@@ -83,8 +83,8 @@ concepts:
       - displayName
     - name: id
       tier: core
-      providers: 30
-      share: 0.769
+      providers: 32
+      share: 0.821
       type: string
       spellings:
       - id
@@ -97,14 +97,14 @@ concepts:
       share: 0.667
       type: string
       spellings:
-      - createdAt
       - created_at
+      - createdAt
       - created
       - date_created
+      - timestamp_opt
       - creation_date
       - dateCreated
       - createdDate
-      - create_time
     - name: updated_at
       tier: core
       providers: 20
@@ -117,24 +117,24 @@ concepts:
       - update_time
     - name: description
       tier: extended
-      providers: 17
-      share: 0.436
+      providers: 18
+      share: 0.462
       type: string
       spellings:
       - description
-      - notes
       - details
+      - notes
     - name: type
       tier: extended
-      providers: 16
-      share: 0.41
+      providers: 17
+      share: 0.436
       type: string
       spellings:
       - type
     - name: status
       tier: extended
-      providers: 14
-      share: 0.359
+      providers: 16
+      share: 0.41
       type: string
       spellings:
       - status
@@ -142,19 +142,20 @@ concepts:
       - subscription_status
     - name: metadata
       tier: extended
-      providers: 10
-      share: 0.256
+      providers: 11
+      share: 0.282
       type: object
       spellings:
       - attributes
       - fields
       - metadata
+      - merge_fields
       - _metadata
       - customFields
     - name: list_id
       tier: extended
-      providers: 9
-      share: 0.231
+      providers: 10
+      share: 0.256
       type: string
       spellings:
       - listId
@@ -162,6 +163,7 @@ concepts:
       - list_ids
       - groupId
       - groups
+      - group_id
     - name: subscriber_count
       tier: extended
       providers: 8
@@ -175,48 +177,48 @@ concepts:
       - subscriber_count
       - stats
       - contact_count
-    long_tail_count: 658
+    long_tail_count: 885
     long_tail_sample:
     - account_id
     - email
     - tags
+    - address
+    - is_deleted
     - user_id
     - action
     - code
     - company
+    - company_name
+    - contact
+    - country
+    - created_by
+    - currency
     - deleted_at
+    - error
     - folder_id
-    - is_deleted
     - limit
     - list_name
     - offset
+    - text
     - updated_by
-    - accounts
-    - address
+    - account_name
+    - amount
+    - attachments
+    - body
     - categories
     - city
+    - client_id
     - color
     - company_id
-    - company_name
-    - contact
-    - contacts
-    - country
+    - cost
     - counts
-    - created_by
     - created_by_id
-    - currency
-    - deals
     - domain
     - double_opt_in
+    - email_address
     - emails
     - end_date
-    - entries
-    - events
     - first_name
-    - from_email
-    - from_name
-    - job_id
-    - job_title
   subscriber:
     segments_seen:
       contacts: 23
@@ -328,15 +330,6 @@ concepts:
       - last_name
       - lastname
       - LastName
-    - name: status
-      tier: extended
-      providers: 12
-      share: 0.444
-      type: string
-      spellings:
-      - status
-      - state
-      - subscriptionStatus
     - name: updated_at
       tier: extended
       providers: 12
@@ -349,6 +342,15 @@ concepts:
       - modifiedAt
       - last_changed
       - updated
+    - name: status
+      tier: extended
+      providers: 11
+      share: 0.407
+      type: string
+      spellings:
+      - status
+      - state
+      - subscriptionStatus
     - name: name
       tier: extended
       providers: 10
@@ -406,7 +408,7 @@ concepts:
       - notes
       - description
       - Description
-    long_tail_count: 438
+    long_tail_count: 435
     long_tail_sample:
     - city
     - country
@@ -490,8 +492,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 12
-      share: 0.857
+      providers: 13
+      share: 0.929
       type: integer
       spellings:
       - id
@@ -522,6 +524,14 @@ concepts:
       type: string
       spellings:
       - type
+    - name: updated_at
+      tier: extended
+      providers: 5
+      share: 0.357
+      type: string
+      spellings:
+      - updatedAt
+      - updated_at
     - name: description
       tier: extended
       providers: 4
@@ -529,37 +539,18 @@ concepts:
       type: string
       spellings:
       - description
-    - name: updated_at
-      tier: extended
-      providers: 4
-      share: 0.286
-      type: string
-      spellings:
-      - updatedAt
-      - updated_at
-    - name: conditions
-      tier: extended
-      providers: 3
-      share: 0.214
-      type: object
-      spellings:
-      - filter
-      - options
-      - conditions
-    - name: list_id
-      tier: extended
-      providers: 3
-      share: 0.214
-      type: integer
-      spellings:
-      - list_id
-    long_tail_count: 88
+    long_tail_count: 87
     long_tail_sample:
+    - conditions
+    - list_id
     - segment_description
+    - segment_name
     - admin_email
     - admin_id
     - advanced_settings
+    - and_or
     - callback_endpoint
+    - category_name
     - contacts_count
     - contacts_sample
     - country_codes
@@ -571,12 +562,12 @@ concepts:
     - depth
     - edited_at
     - elements
-    - entries
     - error_count
     - error_message
     - executed_at
     - expansion_level
     - expired_status
+    - field
     - fields_to_export
     - folder_id
     - is_in_progress
@@ -590,11 +581,6 @@ concepts:
     - last_processed_date
     - match
     - members
-    - members_added
-    - members_removed
-    - members_to_add
-    - members_to_remove
-    - membership_life_span
   campaign:
     segments_seen:
       campaigns: 24
@@ -640,8 +626,8 @@ concepts:
     properties:
     - name: id
       tier: core
-      providers: 23
-      share: 0.92
+      providers: 24
+      share: 0.96
       type: string
       spellings:
       - id
@@ -650,6 +636,17 @@ concepts:
       - campaign_id
       - _id
       - CampaignID
+    - name: created_at
+      tier: core
+      providers: 19
+      share: 0.76
+      type: string
+      spellings:
+      - created_at
+      - createdAt
+      - create_time
+      - created
+      - creation_date
     - name: status
       tier: core
       providers: 18
@@ -659,17 +656,6 @@ concepts:
       - status
       - campaignStatus
       - state
-    - name: created_at
-      tier: core
-      providers: 17
-      share: 0.68
-      type: string
-      spellings:
-      - created_at
-      - createdAt
-      - create_time
-      - created
-      - creation_date
     - name: name
       tier: core
       providers: 16
@@ -679,12 +665,12 @@ concepts:
       - name
     - name: updated_at
       tier: extended
-      providers: 11
-      share: 0.44
+      providers: 12
+      share: 0.48
       type: string
       spellings:
-      - updatedAt
       - updated_at
+      - updatedAt
       - modified
     - name: type
       tier: extended
@@ -735,7 +721,7 @@ concepts:
       - audience_id
       - list_ids
       - list_id
-    long_tail_count: 325
+    long_tail_count: 327
     long_tail_sample:
     - campaign_name
     - scheduled_for
@@ -744,21 +730,24 @@ concepts:
     - clicks
     - content_type
     - description
+    - end_date
     - stats
     - archive_url
     - body_amp
     - broadcast_id
-    - content
     - emails
-    - end_date
+    - failed_count
     - from_name
     - metadata
+    - open_rate
     - opens
+    - platform
     - recipients
     - result
     - segment_ids
     - segment_name
     - send_date
+    - sent_count
     - start_at
     - start_date
     - total_sent
@@ -772,11 +761,8 @@ concepts:
     - address_book_id
     - altbody
     - anonymous_id
-    - app_id
     - archive
     - archive_meta
-    - archive_template_id
-    - archived
   automation:
     segments_seen:
       workflows: 4
@@ -820,11 +806,28 @@ concepts:
     properties:
     - name: id
       tier: core
+      providers: 10
+      share: 0.833
+      type: string
+      spellings:
+      - id
+    - name: name
+      tier: core
       providers: 8
       share: 0.667
       type: string
       spellings:
-      - id
+      - name
+      - title
+    - name: created_at
+      tier: core
+      providers: 7
+      share: 0.583
+      type: string
+      spellings:
+      - createdAt
+      - created_at
+      - create_time
     - name: status
       tier: core
       providers: 7
@@ -832,43 +835,42 @@ concepts:
       type: string
       spellings:
       - status
-    - name: created_at
-      tier: core
-      providers: 6
-      share: 0.5
-      type: string
-      spellings:
-      - createdAt
-      - created_at
-      - create_time
-    - name: name
-      tier: core
-      providers: 6
-      share: 0.5
-      type: string
-      spellings:
-      - name
     - name: type
       tier: extended
-      providers: 4
-      share: 0.333
+      providers: 5
+      share: 0.417
       type: string
       spellings:
       - type
     - name: updated_at
       tier: extended
-      providers: 3
-      share: 0.25
+      providers: 4
+      share: 0.333
       type: string
       spellings:
       - updatedAt
       - updated_at
-    long_tail_count: 64
+    - name: description
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: string
+      spellings:
+      - description
+    - name: tags
+      tier: extended
+      providers: 3
+      share: 0.25
+      type: array
+      spellings:
+      - tags
+    long_tail_count: 80
     long_tail_sample:
-    - description
+    - is_archived
+    - is_enabled
     - metadata
+    - num_steps
     - steps
-    - tags
     - trigger
     - action_name
     - active_definition
@@ -877,34 +879,33 @@ concepts:
     - bounds
     - campaign_context
     - click_rate
+    - clicked_count
     - clicks
     - conversion_rate
     - conversions
     - created_by
+    - created_time
+    - creator_user_id
+    - date
+    - detail
     - directory_id
     - directory_name
+    - draft
     - draft_definition
     - dynamic_list_id
     - emails_sent
+    - enabled
     - engagement_level
     - expected_revision_id
     - flow_id
     - flow_name
-    - is_archived
-    - is_enabled
+    - interval_seconds
+    - is_reply
     - journey_id
+    - journey_type
     - last_modified_at
+    - lifetime_limit
     - location_id
-    - mailing_list_id
-    - metrics
-    - name_explicitly_set
-    - next_page_cursor
-    - next_page_url
-    - next_run_time
-    - num_steps
-    - open_rate
-    - opens
-    - owner_id
   campaign_report:
     segments_seen:
       stats: 6
@@ -923,6 +924,13 @@ concepts:
       share: 0.182
       tier: long-tail
     properties:
+    - name: id
+      tier: extended
+      providers: 4
+      share: 0.444
+      type: string
+      spellings:
+      - id
     - name: sent
       tier: extended
       providers: 4
@@ -949,13 +957,6 @@ concepts:
       - clicked
       - clicks
       - uniqueClicks
-    - name: id
-      tier: extended
-      providers: 3
-      share: 0.333
-      type: string
-      spellings:
-      - id
     - name: opens
       tier: extended
       providers: 3
@@ -973,7 +974,7 @@ concepts:
       spellings:
       - unsubscribed
       - unsubscribes
-    long_tail_count: 133
+    long_tail_count: 134
     long_tail_sample:
     - broadcast
     - revenue
@@ -985,7 +986,6 @@ concepts:
     - assisted_orders
     - assisted_revenue
     - attempted
-    - broadcasts
     - campaign_id
     - campaign_name
     - campaign_type
@@ -1015,3 +1015,4 @@ concepts:
     - human_clicked
     - human_opened
     - is_split_test
+    - language_variants

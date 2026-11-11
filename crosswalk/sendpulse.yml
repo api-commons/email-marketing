@@ -35,8 +35,8 @@ concepts:
       - created_at
       first_name: firstName
       last_name: lastName
-      status: status
       updated_at: updatedAt
+      status: status
       name: name
       phone: phone
       tags: tags
@@ -55,8 +55,8 @@ concepts:
       id:
       - id
       - campaign_id
-      status: status
       created_at: created_at
+      status: status
       name: name
       type: type
       sent_at: send_at
@@ -78,9 +78,10 @@ concepts:
     - autoresponders
     properties:
       id: id
-      status: status
-      created_at: created_at
       name: name
+      created_at: created_at
+      status: status
+      type: type
     core_coverage: 1.0
     evidence:
     - openapi/_original/sendpulse-a360-openapi.yml#GET /a360/autoresponders/{ID}

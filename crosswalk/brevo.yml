@@ -39,7 +39,9 @@ concepts:
   segment:
     path_segment:
     - segments
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      updated_at: updatedAt
+    core_coverage: 0.333
     evidence:
     - openapi/_original/brevo-contact-management-openapi.yml#GET /contacts/segments

@@ -47,8 +47,8 @@ concepts:
     - campaign
     properties:
       id: _id
-      status: status
       created_at: createdAt
+      status: status
       name: name
       updated_at: updatedAt
       sent_at: scheduledAt

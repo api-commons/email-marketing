@@ -37,8 +37,13 @@ concepts:
   automation:
     path_segment:
     - journeys
-    properties: {}
-    core_coverage: 0.0
+    properties:
+      id: id
+      name: name
+      created_at: createdAt
+      updated_at: updatedAt
+      description: description
+    core_coverage: 0.75
     evidence:
     - openapi/_original/iterable-api-openapi.json#GET /api/journeys
   campaign_report:

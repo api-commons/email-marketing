@@ -8,10 +8,16 @@ concepts:
     - list
     properties:
       name: name
-      created_at: create_time
+      id: _id
+      created_at:
+      - created_at
+      - create_time
       updated_at: update_time
+      description: description
       type: type
-    core_coverage: 0.75
+      status: status
+      list_id: group_id
+    core_coverage: 1.0
     evidence:
     - openapi/_original/xiaoman-openapi.yml#GET /v1/capitalAccount/list
     - openapi/_original/xiaoman-openapi.yml#GET /v1/company/list

@@ -30,8 +30,8 @@ concepts:
       created_at: created
       first_name: firstName
       last_name: lastName
-      status: subscriptionStatus
       updated_at: updated
+      status: subscriptionStatus
       list_id:
       - lists
       - listIds
@@ -48,16 +48,16 @@ concepts:
     - campaigns
     properties:
       id:
-      - id
       - campaignId
-      status: state
+      - id
       created_at: created
+      status: state
       updated_at: modified
       type: type
       subject: title
       list_id:
-      - listIds
       - lists
+      - listIds
     core_coverage: 0.75
     evidence:
     - openapi/_original/simpletexting-openapi.yml#GET /api/campaigns

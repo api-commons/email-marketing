@@ -42,10 +42,11 @@ concepts:
     path_segment:
     - journeys
     properties:
-      status: status
-      created_at: createdAt
       name: name
+      created_at: createdAt
+      status: status
       type: type
+      tags: tags
     core_coverage: 0.75
     evidence:
     - openapi/_original/inflectionio-openapi.yml#GET /v2/journeys

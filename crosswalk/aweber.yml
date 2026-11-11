@@ -54,8 +54,8 @@ concepts:
       id:
       - id
       - uuid
-      status: status
       created_at: created_at
+      status: status
       type: campaign_type
       sent_at:
       - scheduled_at
